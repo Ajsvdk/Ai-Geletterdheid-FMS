@@ -1,14 +1,11 @@
+{% include "includes/top_nav.html" %}
+
 # Scholingsaanbod AI
 
-Voorlopige uitwerking van het scholingsaanbod AI. Hieronder vind je enkele aanbevolen cursussen en de doelstellingen van deze site:
+*Laatste update: 18 april 2025*
 
-**Doel van deze site:**
-- Makkelijk bij te werken
-- Beste aanbieders identificeren
-- Overzichtelijk presenteren
-- Open-source
+Voorlopgie open-source, toegankelijke en bijwerkbaar uitwerking van AI-onderwijs voor zorgmedewerkers, in het bijzonder artsen.
 
-![Voorbeeld schermindeling](https://github.com/user-attachments/assets/46d7a7a3-ae7e-4c52-a753-7f1fa6f134d6)
 
 ## Aanbevolen cursussen
 
@@ -18,7 +15,7 @@ Voorlopige uitwerking van het scholingsaanbod AI. Hieronder vind je enkele aanbe
     <h3 class="text-xl font-bold">{{ c['Titel'] }}</h3>
     <p class="text-gray-600">{{ c['Aanbieder'] }}</p>
     <p class="mt-2 font-semibold">{{ c['Kosten'] }}</p>
-    <a href="{{ c['Link'] }}" class="mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded">
+    <a href="{{ c['Link'] }}" class="mt-4 inline-block px-4 py-2 bg-primary text-white rounded">
       Bekijk cursus
     </a>
   </div>
@@ -28,5 +25,3 @@ Voorlopige uitwerking van het scholingsaanbod AI. Hieronder vind je enkele aanbe
 ## Volledig overzicht
 
 Voor een compleet overzicht van alle AI‑opleidingen, ga naar [Cursussen > Overzicht](SCHOLINGSAANBOD.md).
-
-*Laatste update: 18 april 2025*
