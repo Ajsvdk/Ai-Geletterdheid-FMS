@@ -1,17 +1,14 @@
 # Scholingsaanbod AI
 
-Voorlopgie uitwerking scholingsaanbod AI. Hieronder vind je enkele aanbevolen cursussen.
-Doel van deze site:
-Het moet makkelijk bij te werken zijn
-Het moet beste aanbieders identificeren
-Het moet overzichtelijk zijn
-Het moete opensource zijn
+Voorlopige uitwerking van het scholingsaanbod AI. Hieronder vind je enkele aanbevolen cursussen en de doelstellingen van deze site:
 
+**Doel van deze site:**
+- Makkelijk bij te werken
+- Beste aanbieders identificeren
+- Overzichtelijk presenteren
+- Open-source
 
-<img width="431" alt="image" src="https://github.com/user-attachments/assets/46d7a7a3-ae7e-4c52-a753-7f1fa6f134d6" />
-
-
-
+![Voorbeeld schermindeling](https://github.com/user-attachments/assets/46d7a7a3-ae7e-4c52-a753-7f1fa6f134d6)
 
 ## Aanbevolen cursussen
 
@@ -24,6 +21,7 @@ Het moete opensource zijn
     <a href="{{ c['Link'] }}" class="mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded">
       Bekijk cursus
     </a>
+  </div>
 {% endfor %}
 </div>
 
