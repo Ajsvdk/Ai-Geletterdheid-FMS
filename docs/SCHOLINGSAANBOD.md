@@ -1,6 +1,6 @@
 # Scholingsaanbod AI‑opleidingen voor Artsen
 
-Deze lijst bevat een overzicht van beschikbare AI‑opleidingen en -cursussen, inclusief aanbieder, titel, kosten, accreditatie, licentie, leerdoelen en meer. Bijdragen en updates kunnen via pull requests.
+Deze lijst bevat een overzicht van beschikbare AI‑opleidingen en -cursussen, inclusief aanbieder, titel, kosten, accreditatie, licentie, leerdoelen en meer. Bijdragen en updates kunnen via pull requests of per mail naar ....
 
 | Aanbieder                                                                                                                                | Titel                                                |   Kosten | Accreditatie                   | Opensource/Gesloten   | Competenties                                 |   Kennis & Vaardigheden (%) |   Toepassen & Implementeren (%) |   Ethiek, Wetgeving & Samenwerking (%) | Link                                                                                                                  |
 |:-----------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------|---------:|:-------------------------------|:----------------------|:---------------------------------------------|----------------------------:|--------------------------------:|---------------------------------------:|:----------------------------------------------------------------------------------------------------------------------|
