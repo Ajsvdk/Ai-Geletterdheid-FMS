@@ -1,18 +1,17 @@
+/* Hide the left‑hand primary sidebar (material theme) */
+@media (min-width: 768px) {
+  .md-sidebar--primary {
+    display: none !important;
+  }
+  .md-main {
+    margin-left: 0 !important;
+  }
+}
+
 /* Horizontal scroll for wide tables */
 .md-typeset table {
   display: block;
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-/* Hide left sidebar and expand main content */
-@media (min-width: 768px) {
-  .md-sidebar {
-    display: none !important;
-  }
-  .md-main {
-    width: 100% !important;
-    margin-left: 0 !important;
-  }
 }
