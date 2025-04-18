@@ -1,14 +1,23 @@
-/* Hide the left‑hand primary sidebar (material theme) */
-@media (min-width: 768px) {
-  .md-sidebar--primary {
+/* ----------------------------------------------------
+   Verberg de linker navigatiekolom (Bootswatch‑/Lumen‑thema)
+   ---------------------------------------------------- */
+@media (min-width: 992px) {           /* desktop‑breedt­e */
+  /* De sidebar zelf */
+  .col-md-3 {
     display: none !important;
   }
-  .md-main {
-    margin-left: 0 !important;
+
+  /* Uitbreiden van de hoofd­content kolom */
+  .col-md-9 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;       /* voor flex‑grids */
   }
 }
 
-/* Horizontal scroll for wide tables */
+/* ----------------------------------------------------
+   Horizontaal scrollbare tabellen blijft hetzelfde
+   ---------------------------------------------------- */
 .md-typeset table {
   display: block;
   width: 100%;
