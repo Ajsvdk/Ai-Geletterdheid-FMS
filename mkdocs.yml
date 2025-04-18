@@ -8,13 +8,15 @@ nav:
 plugins:
   - search
 theme:
-  name: 'material'
-  logo: 'images/logo.png'
+  name: material
+  logo: images/logo.png
   palette:
-    primary: 'blue'
-    accent: 'light blue'
+    primary: blue
+    accent: light blue
 markdown_extensions:
   - admonition
   - toc:
       permalink: true
   - tables
+extra_css:
+  - css/extra.css
