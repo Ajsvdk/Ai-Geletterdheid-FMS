@@ -8,8 +8,7 @@ nav:
       - Overzicht: SCHOLINGSAANBOD.md
 
 theme:
-  name: bootstrap
-  bootswatch: flatly     # probeer ook 'cerulean', 'lumen' of 'yeti'
+  name: lumen         # Bootswatch-thema 'Lumen'
   logo: images/logo.png
   favicon: images/favicon.ico
 
@@ -23,4 +22,4 @@ markdown_extensions:
   - tables
 
 extra_css:
-  - css/extra.css        # je scroll‑en‑TOC‑hiding CSS
+  - css/extra.css     # voor horizontaal scrollen en TOC-hiding
