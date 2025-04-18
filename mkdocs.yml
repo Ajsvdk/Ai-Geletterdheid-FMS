@@ -1,3 +1,5 @@
+# mkdocs.yml
+
 site_name: "Scholingsaanbod AI voor Artsen"
 repo_url: https://github.com/your-org/ai-education-voor-artsen
 edit_uri: edit/main
@@ -20,7 +22,11 @@ markdown_extensions:
   - toc:
       permalink: true
   - tables
-  - pymdownx.snippets      # <<< enable !INCLUDE syntax
+  - pymdownx.snippets
+
+mdx_configs:
+  pymdownx.snippets:
+    base_path: docs
 
 extra_css:
   - css/extra.css
