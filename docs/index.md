@@ -16,7 +16,7 @@ Gebruik de zoekbalk rechtsboven of bekijk hieronder enkele aanbevolen cursussen:
     </a>
   </div>
   <!-- Voeg hier meer CourseCards in raw HTML of via de include plugin -->
-</div>
+</div>  
 
 ## Volledig Overzicht
 Voor een compleet overzicht van alle AI‑opleidingen ga je naar [Cursussen > Overzicht](SCHOLINGSAANBOD.md).
