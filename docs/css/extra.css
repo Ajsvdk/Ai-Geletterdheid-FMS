@@ -1,3 +1,4 @@
+/* Horizontal scroll for wide tables */
 .md-typeset table {
   display: block;
   width: 100%;
@@ -5,16 +6,13 @@
   -webkit-overflow-scrolling: touch;
 }
 
-/* Hide the right-hand Table of Contents sidebar */
+/* Hide left sidebar and expand main content */
 @media (min-width: 768px) {
-  .md-sidebar--secondary {
+  .md-sidebar {
     display: none !important;
   }
-}
-
-/* Expand content area to full width when TOC is hidden */
-@media (min-width: 768px) {
   .md-main {
-    width: auto !important;
+    width: 100% !important;
+    margin-left: 0 !important;
   }
 }
