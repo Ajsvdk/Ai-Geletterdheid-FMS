@@ -1,6 +1,6 @@
-# Scholingsaanbod AI voor Artsen
+# Scholingsaanbod AI 
 
-Welkom bij het scholingsaanbod AI voor artsen! Hier vind je een overzicht van beschikbare AI-cursussen, speciaal geselecteerd voor medische professionals met een laagdrempelige interface.
+Hier vind je een overzicht van beschikbare AI-cursussen, speciaal geselecteerd voor medische professionals met een laagdrempelige interface. Dit is nog een proefversie
 
 ## Aanbevolen Cursussen
 Gebruik de zoekbalk rechtsboven of bekijk hieronder enkele aanbevolen cursussen:
