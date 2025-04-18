@@ -1,54 +1,47 @@
 name: Build and Deploy MkDocs site
 
-# Run op push naar main
 on:
   push:
     branches:
       - main
 
-# Zet expliciet rechten zodat Pages mag deployen
 permissions:
-  contents: read        # nodig voor checkout
-  pages: write          # nodig om Pages te updaten
-  id-token: write       # nodig voor configure-pages
+  contents: read     # voor checkout
+  pages: write       # om Pages te updaten
+  id-token: write    # voor configure-pages
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. checkout
       - uses: actions/checkout@v3
 
-      # 2. installeer Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      # 3. installeer mkdocs + Material
       - name: Install dependencies
         run: |
           pip install mkdocs-material
 
-      # 4. bouw de site
-      - name: Build MkDocs site
+      - name: Build site
         run: |
           mkdocs build
 
-      # 5. upload het site‑artifact voor deploy
-      - name: Upload artifact for Pages
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: ./site   # MkDocs output directory
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      # 6. configureer Pages
-      - uses: actions/configure-pages@v3
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
 
-      # 7. deploy
-      - uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
