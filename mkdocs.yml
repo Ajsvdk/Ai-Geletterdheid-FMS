@@ -4,11 +4,16 @@ edit_uri: edit/main
 
 nav:
   - Home: index.md
-  - Cursussen:
-      - Overzicht: SCHOLINGSAANBOD.md
+  - Overzicht: SCHOLINGSAANBOD.md
 
 theme:
-  name: lumen
+  name: material
+  features:
+    - navigation.tabs          # Puts Home / Overzicht in the top bar
+    - navigation.instant
+  palette:
+    primary: blue
+    accent: light blue
   logo: images/logo.png
   favicon: images/favicon.ico
 
