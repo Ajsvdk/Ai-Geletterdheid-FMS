@@ -1,22 +1,26 @@
 site_name: "Scholingsaanbod AI voor Artsen"
 repo_url: https://github.com/your-org/ai-education-voor-artsen
 edit_uri: edit/main
+
 nav:
   - Home: index.md
   - Cursussen:
       - Overzicht: SCHOLINGSAANBOD.md
+
+theme:
+  name: bootstrap
+  bootswatch: flatly     # probeer ook 'cerulean', 'lumen' of 'yeti'
+  logo: images/logo.png
+  favicon: images/favicon.ico
+
 plugins:
   - search
-theme:
-  name: material
-  logo: images/logo.png
-  palette:
-    primary: blue
-    accent: light blue
+
 markdown_extensions:
   - admonition
   - toc:
       permalink: true
   - tables
+
 extra_css:
-  - css/extra.css
+  - css/extra.css        # je scroll‑en‑TOC‑hiding CSS
