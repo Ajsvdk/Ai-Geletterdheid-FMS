@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: read     # nodig voor checkout
-  pages: write       # nodig om Pages te updaten
+  pages: write       # om Pages te updaten
   id-token: write    # nodig voor configure-pages
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs-material
+          pip install mkdocs mkdocs-bootswatch
 
       - name: Build MkDocs site
         run: |
@@ -35,7 +35,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site   # MkDocs output directory
+          path: ./site
 
   deploy:
     needs: build
