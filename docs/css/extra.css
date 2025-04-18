@@ -4,3 +4,17 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* Hide the right-hand Table of Contents sidebar */
+@media (min-width: 768px) {
+  .md-sidebar--secondary {
+    display: none !important;
+  }
+}
+
+/* Expand content area to full width when TOC is hidden */
+@media (min-width: 768px) {
+  .md-main {
+    width: auto !important;
+  }
+}
