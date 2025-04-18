@@ -8,7 +8,7 @@ nav:
       - Overzicht: SCHOLINGSAANBOD.md
 
 theme:
-  name: lumen         # Bootswatch-thema 'Lumen'
+  name: lumen
   logo: images/logo.png
   favicon: images/favicon.ico
 
@@ -20,6 +20,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - tables
+  - pymdownx.snippets      # <<< enable !INCLUDE syntax
 
 extra_css:
-  - css/extra.css     # voor horizontaal scrollen en TOC-hiding
+  - css/extra.css
