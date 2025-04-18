@@ -7,13 +7,7 @@ nav:
   - Overzicht: SCHOLINGSAANBOD.md
 
 theme:
-  name: material
-  features:
-    - navigation.tabs          # Puts Home / Overzicht in the top bar
-    - navigation.instant
-  palette:
-    primary: blue
-    accent: light blue
+  name: lumen         # ← Bootswatch-thema
   logo: images/logo.png
   favicon: images/favicon.ico
 
