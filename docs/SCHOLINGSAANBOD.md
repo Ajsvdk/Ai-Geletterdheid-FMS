@@ -1,21 +1,5 @@
 <!-- docs/SCHOLINGSAANBOD.md -->
 
-<!-- Inline Bootstrap navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-  <div class="container">
-    <a class="navbar-brand" href="/">🏠 Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mkdocsNav" aria-controls="mkdocsNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mkdocsNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/SCHOLINGSAANBOD.html">Overzicht</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 # Scholingsaanbod AI‑opleidingen voor Artsen
 
 *Laatste update: 18 april 2025*
