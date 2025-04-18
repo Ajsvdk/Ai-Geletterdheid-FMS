@@ -1,24 +1,34 @@
-# Scholingsaanbod AI 
+# Scholingsaanbod AI
 
-Hier vind je een overzicht van beschikbare AI-cursussen, speciaal geselecteerd voor medische professionals met een laagdrempelige interface. Dit is nog een proefversie
+Voorlopgie uitwerking scholingsaanbod AI. Hieronder vind je enkele aanbevolen cursussen.
+Doel van deze site:
+Het moet makkelijk bij te werken zijn
+Het moet beste aanbieders identificeren
+Het moet overzichtelijk zijn
+Het moete opensource zijn
 
-## Aanbevolen Cursussen
-Gebruik de zoekbalk rechtsboven of bekijk hieronder enkele aanbevolen cursussen:
+
+<img width="431" alt="image" src="https://github.com/user-attachments/assets/46d7a7a3-ae7e-4c52-a753-7f1fa6f134d6" />
+
+
+
+
+## Aanbevolen cursussen
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
-  <!-- Voorbeeld Course Cards -->
+{% for c in courses %}
   <div class="card p-4 shadow-lg rounded-lg">
-    <h3 class="text-xl font-bold">AI in de Zorg</h3>
-    <p class="text-gray-600">Voorbeeld perfecte aanbieder</p>
-    <p class="mt-2 font-semibold">Gratis</p>
-    <a href="https://voorbeeld.nl" class="mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded">
+    <h3 class="text-xl font-bold">{{ c['Titel'] }}</h3>
+    <p class="text-gray-600">{{ c['Aanbieder'] }}</p>
+    <p class="mt-2 font-semibold">{{ c['Kosten'] }}</p>
+    <a href="{{ c['Link'] }}" class="mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded">
       Bekijk cursus
     </a>
-  </div>
-  <!-- Voeg hier meer CourseCards in raw HTML of via de include plugin -->
-</div>  
+{% endfor %}
+</div>
 
-## Volledig Overzicht
-Voor een compleet overzicht van alle AI‑opleidingen ga je naar [Cursussen > Overzicht](SCHOLINGSAANBOD.md).
+## Volledig overzicht
 
-*Laatste update: 18 april 2025*  
+Voor een compleet overzicht van alle AI‑opleidingen, ga naar [Cursussen > Overzicht](SCHOLINGSAANBOD.md).
+
+*Laatste update: 18 april 2025*
