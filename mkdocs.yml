@@ -24,7 +24,7 @@ markdown_extensions:
   - tables
   - pymdownx.snippets
 
-mdx_configs:
+extension_configs:
   pymdownx.snippets:
     base_path: docs
 
