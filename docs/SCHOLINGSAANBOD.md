@@ -1,4 +1,4 @@
-{% include "includes/top_nav.html" %}
+!INCLUDE "includes/top_nav.html"
 
 # Scholingsaanbod AI‑opleidingen voor Artsen
 
