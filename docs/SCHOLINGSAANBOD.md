@@ -1,8 +1,6 @@
 # Scholingsaanbod AI‑opleidingen voor Artsen
 
-*Laatste update: 18 april 2025*
-
-<div style="overflow-x:auto;">
+*Laatste update: 18 april 2025*
 
 | Aanbieder | Titel | Kosten | Accreditatie | Opensource/Gesloten | Competenties | Kennis & Vaardigheden (%) | Toepassen & Implementeren (%) | Ethiek, Wetgeving & Samenwerking (%) | Link |
 |-----------|-------|--------|--------------|---------------------|--------------|---------------------------|------------------------------|-----------------------------------|------|
@@ -26,6 +24,5 @@
 | <img src="https://logo.clearbit.com/nlaic.com" width="24" style="vertical-align:middle;margin-right:8px"/> NLAIC | Nationale AI in de Zorg Congres |  |  |  |  |  |  |  | [Link](https://nlaic.com/agenda/nationale-ai-in-de-zorg-congres/?utm_source=chatgpt.com) |
 | <img src="https://logo.clearbit.com/events.iqvia.com" width="24" style="vertical-align:middle;margin-right:8px"/> IQVIA | IQVIA AI in Healthcare Event |  |  |  |  |  |  |  | [Link](https://www.events.iqvia.com/event/b3a10e75-f317-400e-ada9-3012bd30640d/summary) |
 | <img src="https://logo.clearbit.com/nvml.nl" width="24" style="vertical-align:middle;margin-right:8px"/> NVML | Spring Event 2025 |  |  |  |  |  |  |  | [Link](https://www.nvml.nl/opleiding/agenda/event/81/spring-event-2025/schedule?utm_source=chatgpt.com) |
-| <img src="https://logo.clearbit.com/academy.aicertified.nl" width="24" style="vertical-align:middle;margin-right:8px"/> RMMBR, AMDIGITAL & BLOCKSLXP, Microsoft Philanthropies, Stichting Nederland Onderneemt Maatschappelijk & Van Haren Learning Solutions | AI‑Certified Basis + zorg | 0 | officieel certificaat |  |  |  |  |  | [Link](https://academy.aicertified.nl) |
+| <img src="https://logo.clearbit.com/academy.aicertified.nl" width="24" style="vertical-align:middle;margin-right:8px"/> RMMBR, AMDIGITAL & BLOCKSLXP, Microsoft Philanthropies, Stichting Nederland Onderneemt Maatschappelijk & Van Haren Learning Solutions | AI‑Certified Basis + zorg | 0 | officieel certificaat |  |  |  |  |  | [Link](https://academy.aicertified.nl) |
 
-</div>
