@@ -1,13 +1,19 @@
-<!-- docs/index.md -->
-
-{! includes/top_nav.html !}
+<!-- Top navigation, inlined -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="/">🏠 Home</a>
+    <a class="nav-link d-inline-block ml-3" href="/SCHOLINGSAANBOD.html">📚 Overzicht</a>
+  </div>
+</nav>
 
 # Scholingsaanbod AI voor Artsen
 
 *Laatste update: 18 april 2025*
 
-Voorlopige uitwerking scholingsaanbod AI voor zorgmedewerkers, specifiek voor artsen
-WIP
+Voorlopige uitwerking scholingsaanbod voor zorgmedewerkers, specifiek artsen.
+Work in progress
+
+
 
 
 ## Volledig overzicht
