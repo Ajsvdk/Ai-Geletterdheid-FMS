@@ -1,0 +1,20 @@
+site_name: "Scholingsaanbod AI voor Artsen"
+repo_url: https://github.com/your-org/ai-education-voor-artsen
+edit_uri: edit/main
+nav:
+  - Home: index.md
+  - Cursussen:
+      - Overzicht: SCHOLINGSAANBOD.md
+plugins:
+  - search
+theme:
+  name: 'material'
+  logo: 'images/logo.png'
+  palette:
+    primary: 'blue'
+    accent: 'light blue'
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
