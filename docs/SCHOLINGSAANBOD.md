@@ -5,6 +5,8 @@
 
 *Informatie is mogelijk nog incorrect; Work in progess*
 
+Beste weergave op je computer/laptop
+
 | Aanbieder | Titel | Specifiek gericht op artsen | Kosten | Tijdsinvestering | Accreditatie | Opensource/Gesloten | Competenties | Link |
 |-----------|-------|-----------------------------|--------|------------------|--------------|---------------------|--------------|------|
 | <img src="https://logo.clearbit.com/wz2025.nl" width="24" style="vertical-align:middle;margin-right:8px"/> WZ2025 (FMS) | Artificiële Intelligentie in de Zorg | Ja |  |  |  |  |  | [Link](https://www.wz2025.nl/2021/11/06/artificiele-intelligentie-in-de-zorg/) |
