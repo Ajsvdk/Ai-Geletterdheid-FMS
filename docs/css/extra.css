@@ -1,26 +1,72 @@
 /* ----------------------------------------------------
    Verberg de linker navigatiekolom (Bootswatch‑/Lumen‑thema)
    ---------------------------------------------------- */
-@media (min-width: 992px) {           /* desktop‑breedt­e */
-  /* De sidebar zelf */
+@media (min-width: 992px) {           /* desktop‑breedte */
   .col-md-3 {
     display: none !important;
   }
 
-  /* Uitbreiden van de hoofd­content kolom */
   .col-md-9 {
     width: 100% !important;
     max-width: 100% !important;
-    flex: 0 0 100% !important;       /* voor flex‑grids */
+    flex: 0 0 100% !important;
   }
 }
 
 /* ----------------------------------------------------
-   Horizontaal scrollbare tabellen blijft hetzelfde
+   Horizontaal scrollbare tabellen
    ---------------------------------------------------- */
 .md-typeset table {
   display: block;
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+/* ----------------------------------------------------
+   Formulier styling voor mobielvriendelijkheid
+   ---------------------------------------------------- */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #007ACC;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #005ea2;
 }
