@@ -8,8 +8,11 @@ Dit is het voorlopige overzicht van scholingsaanbod in AI voor zorgmedewerkers, 
 Work in progress. Ik hoor graag feedback.
 
 Doel:
+
 - Het overzicht moet makkelijk bij te werken zijn
+  
 - Het overzicht moet beste aanbieders identificeren
+  
 - Het overzicht moet overzichtelijk zijn
 
 
