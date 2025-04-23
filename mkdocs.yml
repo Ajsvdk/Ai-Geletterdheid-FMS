@@ -5,6 +5,7 @@ edit_uri: edit/main
 nav:
   - Home: index.md
   - Overzicht: SCHOLINGSAANBOD.md
+  - Bijdragen: bijdragen.md
 
 theme:
   name: lumen         # ← Bootswatch-thema
