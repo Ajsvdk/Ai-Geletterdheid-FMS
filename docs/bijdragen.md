@@ -1,33 +1,42 @@
 # Voeg een scholing toe
 
-Vul het onderstaande formulier in om een nieuwe AI-scholing aan te dragen. Deze gegevens worden (voor nu) niet automatisch opgeslagen — kopieer en mail ze handmatig naar de redactie.
+Gebruik onderstaand formulier om een nieuwe scholing aan te dragen. De gegevens worden automatisch opgeslagen in de GitHub-repo als een nieuw issue.
 
-<form name="submit-to-google-sheet">
-  <label for="opleiding">Naam van de opleiding:</label><br>
-  <input type="text" id="opleiding" name="opleiding" required><br><br>
-
-  <label for="aanbieder">Aanbieder:</label><br>
-  <input type="text" id="aanbieder" name="aanbieder" required><br><br>
-
-  <label for="link">Link naar website:</label><br>
-  <input type="url" id="link" name="link"><br><br>
-
-  <label for="doelgroep">Voor wie is het bedoeld?</label><br>
-  <input type="text" id="doelgroep" name="doelgroep"><br><br>
-
-  <label for="beschrijving">Korte beschrijving:</label><br>
-  <textarea id="beschrijving" name="beschrijving" rows="5" cols="40"></textarea><br><br>
-
-  <label for="naam">Jouw naam (optioneel):</label><br>
-  <input type="text" id="naam" name="naam"><br><br>
-
-  <button type="submit">Verzenden</button>
+<form id="scholingsformulier">
+  <label>Naam van de opleiding:<br><input name="opleiding" required></label><br><br>
+  <label>Aanbieder:<br><input name="aanbieder" required></label><br><br>
+  <label>Link naar website:<br><input name="link"></label><br><br>
+  <label>Doelgroep:<br><input name="doelgroep"></label><br><br>
+  <label>Korte beschrijving:<br><textarea name="beschrijving" rows="5" cols="50"></textarea></label><br><br>
+  <label>Jouw naam (optioneel):<br><input name="naam"></label><br><br>
+  <button type="submit">Verstuur</button>
 </form>
 
+<div id="status"></div>
+
 <script>
-  const form = document.querySelector("form");
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Dank je! Kopieer je ingevulde gegevens en mail ze naar de redactie.");
-  });
-</script>
+document.getElementById("scholingsformulier").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const data = new FormData(e.target);
+  const values = Object.fromEntries(data.entries());
+
+  const issueBody = `
+**Naam opleiding**: ${values.opleiding}
+**Aanbieder**: ${values.aanbieder}
+**Website**: ${values.link}
+**Doelgroep**: ${values.doelgroep}
+**Beschrijving**:
+${values.beschrijving}
+
+*Ingediend door: ${values.naam || 'anoniem'}*
+  `;
+
+  const response = await fetch("https://api.github.com/repos/YOUR-USERNAME/YOUR-REPO/issues", {
+    method: "POST",
+    headers: {
+      "Authorization": "Bearer {{ site.token }}",
+      "Accept": "application/vnd.github+json"
+    },
+    body: JSON.stringify({
+      title: `Nieuw aanbod: ${values.opleiding}`,
+      body: issueBody,
