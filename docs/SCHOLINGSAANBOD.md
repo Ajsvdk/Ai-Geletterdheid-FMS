@@ -1,6 +1,8 @@
 # Scholingsaanbod AI‑opleidingen voor Artsen
 
-*Laatste update: 23 april 2025*
+*Laatste update: 23 april 2025*/
+
+
 *Informatie is mogelijk nog incorrect; Work in progess*
 
 | Aanbieder | Titel | Specifiek gericht op artsen | Kosten | Tijdsinvestering | Accreditatie | Opensource/Gesloten | Competenties | Link |
