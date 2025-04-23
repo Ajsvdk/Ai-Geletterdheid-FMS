@@ -14,8 +14,13 @@ Doel:
 
 
 ---
-
 Voor een compleet overzicht van alle AI‑opleidingen, klik op **Overzicht** in de bovenste navigatie.
+
+📌 **Je kunt  zelf opleidingen toevoegen via het formulier**  
+Ga naar [Bijdragen](bijdragen.md) om nieuwe scholing aan te dragen.
+
+
+
 
 
 A. van der Kuil
