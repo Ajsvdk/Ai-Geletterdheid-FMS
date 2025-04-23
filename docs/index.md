@@ -2,7 +2,7 @@
 
 *Laatste update: 18 april 2025*
 
-*A. van der Kuil*
+
 
 Dit is het voorlopige overzicht van scholingsaanbod in AI voor zorgmedewerkers, specifiek voor artsen.
 Work in progress. Ik hoor graag feedback.
@@ -16,3 +16,6 @@ Doel:
 ---
 
 Voor een compleet overzicht van alle AI‑opleidingen, klik op **Overzicht** in de bovenste navigatie.
+
+
+A. van der Kuil
