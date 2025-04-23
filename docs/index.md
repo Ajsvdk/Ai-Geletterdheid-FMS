@@ -1,6 +1,6 @@
 # Scholingsaanbod AI voor Artsen
 
-*Laatste update: 18 april 2025*
+*Laatste update: 23 april 2025*
 
 
 
