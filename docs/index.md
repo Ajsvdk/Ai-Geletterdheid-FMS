@@ -1,6 +1,7 @@
 # Scholingsaanbod AI voor Artsen
 
 *Laatste update: 18 april 2025*
+
 *A. van der Kuil*
 
 Dit is het voorlopige overzicht van scholingsaanbod in AI voor zorgmedewerkers, specifiek voor artsen.
