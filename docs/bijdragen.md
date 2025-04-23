@@ -1,14 +1,38 @@
-# Voeg  scholing toe
+# Voeg onderwijsaanbod toe
 
-Gebruik onderstaand formulier om nieuwe scholing aan te dragen. De gegevens worden automatisch opgeslagen in deze GitHub-repo als een nieuw issue. Je inzending wordt (voor nu) handmatig verwerkt in het overzicht.
+Gebruik onderstaand formulier nieuwe scholing aan te dragen. De gegevens worden automatisch opgeslagen in deze GitHub-repo als een nieuw issue. Je inzending wordt (voor nu) handmatig verwerkt in het overzicht.
 
 <form id="scholingsformulier">
-  <label>Naam van de opleiding:<br><input name="opleiding" required></label><br><br>
-  <label>Aanbieder:<br><input name="aanbieder" required></label><br><br>
-  <label>Link naar website:<br><input name="link" type="url"></label><br><br>
-  <label>Voor wie is het bedoeld?<br><input name="doelgroep"></label><br><br>
-  <label>Korte beschrijving:<br><textarea name="beschrijving" rows="5" cols="50"></textarea></label><br><br>
-  <label>Jouw naam (optioneel):<br><input name="naam"></label><br><br>
+  <div class="form-group">
+    <label for="opleiding">Naam van de opleiding:</label>
+    <input name="opleiding" id="opleiding" required>
+  </div>
+
+  <div class="form-group">
+    <label for="aanbieder">Aanbieder:</label>
+    <input name="aanbieder" id="aanbieder" required>
+  </div>
+
+  <div class="form-group">
+    <label for="link">Link naar website:</label>
+    <input name="link" id="link" type="text" placeholder="https://voorbeeld.nl">
+  </div>
+
+  <div class="form-group">
+    <label for="doelgroep">Voor wie is het bedoeld?</label>
+    <input name="doelgroep" id="doelgroep">
+  </div>
+
+  <div class="form-group">
+    <label for="beschrijving">Korte beschrijving:</label>
+    <textarea name="beschrijving" id="beschrijving" rows="5"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="naam">Jouw naam (optioneel):</label>
+    <input name="naam" id="naam">
+  </div>
+
   <button type="submit">Verzenden</button>
 </form>
 
@@ -34,7 +58,7 @@ ${values.beschrijving}
   const response = await fetch("https://api.github.com/repos/Ajsvdk/Ai-Geletterdheid-FMS/issues", {
     method: "POST",
     headers: {
-      "Authorization": "Bearer YOUR_TOKEN_HERE",  // ← deze token moet server-side of via Netlify function worden verwerkt
+      "Authorization": "Bearer YOUR_TOKEN_HERE",  // ← vervang met veilige token via backend
       "Accept": "application/vnd.github+json"
     },
     body: JSON.stringify({
