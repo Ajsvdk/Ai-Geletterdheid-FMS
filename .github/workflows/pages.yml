@@ -14,7 +14,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -30,6 +31,19 @@ jobs:
       - name: Build MkDocs site
         run: |
           mkdocs build
+
+      # ──────────────────────────────────────────────────────────────
+      # Vervang placeholder __ISSUE_TOKEN__ door geheime ISSUE_TOKEN
+      # ──────────────────────────────────────────────────────────────
+      - name: Inject issue token in built HTML
+        env:
+          TOKEN: ${{ secrets.ISSUE_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error::ISSUE_TOKEN secret ontbreekt"; exit 1;
+          fi
+          find site -type f -name '*.html' -exec \
+            sed -i "s/__ISSUE_TOKEN__/${TOKEN}/g" {} +
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
