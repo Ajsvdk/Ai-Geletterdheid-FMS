@@ -1,6 +1,7 @@
-# Voeg onderwijsaanbod toe
+# Voeg een scholing toe
 
-Gebruik onderstaand formulier nieuwe scholing aan te dragen. De gegevens worden automatisch opgeslagen in deze GitHub-repo als een nieuw issue. Je inzending wordt (voor nu) handmatig verwerkt in het overzicht.
+Gebruik onderstaand formulier om nieuwe scholing aan te dragen.  
+De gegevens worden automatisch opgeslagen in deze GitHub-repo als een nieuw issue.
 
 <form id="scholingsformulier">
   <div class="form-group">
@@ -36,46 +37,41 @@ Gebruik onderstaand formulier nieuwe scholing aan te dragen. De gegevens worden 
   <button type="submit">Verzenden</button>
 </form>
 
-<div id="status" style="margin-top: 1rem;"></div>
+<div id="status" style="margin-top:1rem;"></div>
 
 <script>
-document.getElementById("scholingsformulier").addEventListener("submit", async function(e) {
+document.getElementById("scholingsformulier").addEventListener("submit", async (e) => {
   e.preventDefault();
   const data = new FormData(e.target);
-  const values = Object.fromEntries(data.entries());
+  const v = Object.fromEntries(data.entries());
 
   const issueBody = `
-**Naam opleiding**: ${values.opleiding}
-**Aanbieder**: ${values.aanbieder}
-**Website**: ${values.link}
-**Doelgroep**: ${values.doelgroep}
+**Naam opleiding**: ${v.opleiding}
+**Aanbieder**: ${v.aanbieder}
+**Website**: ${v.link}
+**Doelgroep**: ${v.doelgroep}
 **Beschrijving**:
-${values.beschrijving}
+${v.beschrijving}
 
-*Ingediend door: ${values.naam || 'anoniem'}*
+*Ingediend door: ${v.naam || 'anoniem'}*
   `;
 
-  const response = await fetch("https://api.github.com/repos/Ajsvdk/Ai-Geletterdheid-FMS/issues", {
+  const r = await fetch("https://api.github.com/repos/Ajsvdk/Ai-Geletterdheid-FMS/issues", {
     method: "POST",
     headers: {
-      "Authorization": "Bearer YOUR_TOKEN_HERE",  // ← vervang met veilige token via backend
+      "Authorization": "Bearer __ISSUE_TOKEN__",    // ← wordt door workflow vervangen
       "Accept": "application/vnd.github+json"
     },
     body: JSON.stringify({
-      title: `Nieuw aanbod: ${values.opleiding}`,
+      title: `Nieuw aanbod: ${v.opleiding}`,
       body: issueBody,
       labels: ["inzending"]
     })
   });
 
-  const status = document.getElementById("status");
-  if (response.ok) {
-    status.innerText = "✅ Bedankt! Je inzending is opgeslagen als issue in de GitHub-repo.";
-    e.target.reset();
-  } else {
-    status.innerText = "❌ Er ging iets mis. Probeer het later opnieuw.";
-  }
+  document.getElementById("status").textContent =
+    r.ok ? "✅ Bedankt! Je inzending is opgeslagen." :
+           "❌ Er ging iets mis. Probeer het later opnieuw.";
+  if (r.ok) e.target.reset();
 });
 </script>
-
-> *Je inzending wordt zichtbaar op de GitHub-pagina en handmatig verwerkt.*
