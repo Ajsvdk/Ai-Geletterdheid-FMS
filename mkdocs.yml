@@ -1,11 +1,12 @@
 site_name: "Scholingsaanbod AI voor Artsen"
-repo_url: https://github.com/your-org/ai-education-voor-artsen
+repo_url: https://github.com/Ajsvdk/Ai-Geletterdheid-FMS
 edit_uri: edit/main
 
 nav:
   - Home: index.md
   - Overzicht: SCHOLINGSAANBOD.md
   - Bijdragen: bijdragen.md
+  - Status: status.md
 
 theme:
   name: lumen         # ← Bootswatch-thema
@@ -20,6 +21,8 @@ markdown_extensions:
   - toc:
       permalink: true
   - tables
+  - attr_list
+  - md_in_html
 
 extra_css:
   - css/extra.css

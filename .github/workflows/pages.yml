@@ -4,11 +4,18 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 */12 * * *'  # Run every 12 hours to ensure site is up
+  workflow_dispatch:  # Allow manual triggering
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -23,14 +30,40 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+          cache: 'pip'
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install mkdocs mkdocs-bootswatch pymdown-extensions
+        continue-on-error: false
 
       - name: Build MkDocs site
         run: |
           mkdocs build
+        continue-on-error: false
+
+      # Add security headers to all HTML files
+      - name: Add security headers
+        run: |
+          for file in $(find site -name "*.html"); do
+            sed -i '/<\/head>/ i\
+            <meta http-equiv="Content-Security-Policy" content="default-src '\''self'\''; img-src '\''self'\'' https:; script-src '\''self'\'' '\''unsafe-inline'\'' '\''unsafe-eval'\''; style-src '\''self'\'' '\''unsafe-inline'\''; report-uri https://ajsvdk.report-uri.com/r/d/csp/enforce;">\
+            <meta http-equiv="Content-Security-Policy-Report-Only" content="default-src '\''self'\''; report-uri https://ajsvdk.report-uri.com/r/d/csp/reportOnly">\
+            <meta http-equiv="X-Content-Type-Options" content="nosniff">\
+            <meta http-equiv="X-Frame-Options" content="DENY">\
+            <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">\
+            <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=()">\
+            <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">' "$file"
+          done
 
       # ──────────────────────────────────────────────────────────────
       # Vervang placeholder __ISSUE_TOKEN__ door geheime ISSUE_TOKEN
@@ -49,8 +82,12 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./site
+        if: success()
  
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -58,8 +95,20 @@ jobs:
         uses: actions/configure-pages@v3
         with:
           enablement: 'workflow'
+          https_only: true  # Force HTTPS
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          force_orphan: true  # Ensure clean deployment
+          cname: ${{ env.CNAME }}  # Use custom domain if configured
+
+      - name: Check deployment status
+        if: always()
+        run: |
+          if [ "${{ steps.deployment.outcome }}" != "success" ]; then
+            echo "Deployment failed"
+            exit 1
+          fi

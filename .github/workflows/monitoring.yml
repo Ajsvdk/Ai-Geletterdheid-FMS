@@ -1,0 +1,31 @@
+name: Website Monitoring
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Run every 30 minutes
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check website availability
+        uses: upptime/uptime-monitor@v1
+        with:
+          urls: |
+            https://ajsvdk.github.io/Ai-Geletterdheid-FMS/
+          user-agent: GitHub-Monitoring
+        continue-on-error: true
+
+      - name: Create issue on failure
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Website is down',
+              body: 'The website monitoring check has failed. Please investigate.',
+              labels: ['incident', 'high-priority']
+            }); 
