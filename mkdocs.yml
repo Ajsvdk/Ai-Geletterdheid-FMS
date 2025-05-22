@@ -1,6 +1,4 @@
 site_name: "Scholingsaanbod AI voor Artsen"
-repo_url: https://github.com/Ajsvdk/Ai-Geletterdheid-FMS
-edit_uri: edit/main
 
 nav:
   - Home: index.md
@@ -45,13 +43,3 @@ extra_css:
 
 extra_javascript:
   - js/filter.js
-
-extra:
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Ajsvdk/Ai-Geletterdheid-FMS
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:a.vanderkuil@fms.nl
