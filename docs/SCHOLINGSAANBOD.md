@@ -31,6 +31,8 @@
     </div>
 </div>
 
+<div class="active-filters" id="activeFilters"></div>
+
 <div class="page-actions">
     <a href="bijdragen" class="action-button">
         ➕ Opleiding Toevoegen
