@@ -13,13 +13,6 @@
 
 ## Overzicht Opleidingen
 
-<div class="view-options">
-    <div class="view-description">
-        💡 Tip: Gebruik de filters om snel relevante opleidingen te vinden. 
-        Klik op een kolom om te sorteren.
-    </div>
-</div>
-
 | Aanbieder | Titel | Voor Artsen | Kosten | Tijdsinvestering | Type | Niveau | Specialisme | Link |
 |-----------|-------|-------------|---------|------------------|------|---------|-------------|------|
 | <img src="https://logo.clearbit.com/wz2025.nl" class="provider-logo"/> WZ2025 (FMS) | Artificiële Intelligentie in de Zorg | <span class="tag-yes">Ja</span> | <span class="status-free">Gratis</span> | 4 uur | Online | <span class="difficulty beginner"></span> Basis | Alle | [Start cursus](https://www.wz2025.nl/2021/11/06/artificiele-intelligentie-in-de-zorg/) |

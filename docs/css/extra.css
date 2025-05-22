@@ -107,12 +107,14 @@ td:nth-child(8), th:nth-child(8) { /* Specialisme */
     min-width: 150px;
 }
 
-/* Provider logo sizing */
+/* Provider logos */
 .provider-logo {
-    max-width: 24px;
-    height: auto;
-    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
     margin-right: 8px;
+    vertical-align: middle;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 th {
