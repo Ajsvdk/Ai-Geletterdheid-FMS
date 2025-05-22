@@ -8,9 +8,6 @@
         <a href="bijdragen.md" class="action-button">
             ➕ Opleiding Toevoegen
         </a>
-        <a href="#" class="action-button" id="toggleView">
-            🔄 Weergave Aanpassen
-        </a>
     </div>
 </div>
 
@@ -58,23 +55,5 @@
 | ESTRO | ESTRO course AI in RT | Nee |  |  |  |  |  |  |
 | <img src="https://logo.clearbit.com/dlinrt.org" width="24" style="vertical-align:middle;margin-right:8px"/> DLinRT | DL in RT | Nee |  | 17-18 maart 2025 |  |  |  | [Link](http://www.dlinrt.org/) |
 | <img src="https://logo.clearbit.com/academy.aicertified.nl" width="24" style="vertical-align:middle;margin-right:8px"/> Microsoft / AI Certified | AI Certified Basis + Zorg | Ja | 0 | 4 uur | officieel certificaat |  |  | [Link](https://academy.aicertified.nl) |
-
-## Uitgelichte Opleidingen
-
-<div class="featured-courses">
-    <div class="course-card featured">
-        <div class="course-header">
-            <img src="https://logo.clearbit.com/ai-cursus.nl" alt="NL AI Coalitie" class="provider-logo"/>
-            <span class="status-free">Gratis</span>
-        </div>
-        <h3>AI voor de zorg</h3>
-        <p>Een laagdrempelige introductie in AI specifiek voor zorgprofessionals.</p>
-        <div class="course-meta">
-            <span>⏱️ 2,5 uur</span>
-            <span>🎯 Basis niveau</span>
-        </div>
-        <a href="https://www.ai-cursus.nl" class="course-button">Start direct</a>
-    </div>
-</div>
 
 <script src="../js/filter.js"></script>
