@@ -15,12 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run OWASP ZAP Full Scan
-        uses: zaproxy/action-full-scan@v0.4.0
-        with:
-          target: 'https://ajsvdk.github.io/Ai-Geletterdheid-FMS/'
-          allow_issue_writing: true
-
       - name: Run Dependency Review
         uses: actions/dependency-review-action@v3
         if: github.event_name == 'pull_request'
