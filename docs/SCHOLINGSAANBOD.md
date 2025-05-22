@@ -48,5 +48,3 @@
 | ESTRO | ESTRO course AI in RT | Nee |  |  |  |  |  |  |
 | <img src="https://logo.clearbit.com/dlinrt.org" width="24" style="vertical-align:middle;margin-right:8px"/> DLinRT | DL in RT | Nee |  | 17-18 maart 2025 |  |  |  | [Link](http://www.dlinrt.org/) |
 | <img src="https://logo.clearbit.com/academy.aicertified.nl" width="24" style="vertical-align:middle;margin-right:8px"/> Microsoft / AI Certified | AI Certified Basis + Zorg | Ja | 0 | 4 uur | officieel certificaat |  |  | [Link](https://academy.aicertified.nl) |
-
-<script src="../js/filter.js"></script>
