@@ -12,9 +12,18 @@ theme:
   name: lumen         # ← Bootswatch-thema
   logo: images/logo.png
   favicon: images/favicon.ico
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
 
 plugins:
   - search
+  - tags
 
 markdown_extensions:
   - admonition
@@ -23,6 +32,25 @@ markdown_extensions:
   - tables
   - attr_list
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra_css:
   - css/extra.css
+
+extra_javascript:
+  - js/filter.js
+
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Ajsvdk/Ai-Geletterdheid-FMS
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:a.vanderkuil@fms.nl
