@@ -18,16 +18,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Run Dependency Review
         uses: actions/dependency-review-action@v3
         if: github.event_name == 'pull_request'
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
-          languages: python
+          languages: javascript  # Changed from Python to JavaScript since we mainly have JS code
+          queries: security-extended
+          config-file: ./.github/codeql/codeql-config.yml
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2 
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:javascript" 
