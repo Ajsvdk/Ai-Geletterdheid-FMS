@@ -1,9 +1,7 @@
 name: Website Monitoring
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'  # Run every 30 minutes
-  workflow_dispatch:  # Allow manual triggering
+  workflow_dispatch:  # Allow manual triggering only
 
 jobs:
   monitor:
