@@ -1,16 +1,5 @@
-# Nieuwe Scholing Toevoegen
 
-Gebruik dit formulier om een nieuwe AI-scholing toe te voegen aan ons overzicht.
-
-## Snelle Toevoeging via GitHub
-
-Voor de snelste verwerking, [**klik hier om een nieuwe scholing toe te voegen**](https://github.com/Ajsvdk/Ai-Geletterdheid-FMS/issues/new?assignees=&labels=nieuwe-scholing&projects=&template=nieuwe-scholing.md&title=%5BNieuwe+Scholing%5D+).
-
-Dit opent een GitHub issue dat automatisch wordt verwerkt en toegevoegd aan het overzicht.
-
----
-
-## Alternatief: Handmatig Formulier
+## Scholingsaanbod toegen
 
 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
   <div style="margin-bottom: 20px;">
@@ -69,14 +58,4 @@ Dit opent een GitHub issue dat automatisch wordt verwerkt en toegevoegd aan het 
     Scholing Toevoegen
   </button>
 </form>
-
----
-
-## Waarom deze scholing toevoegen?
-
-- ✅ **Kwaliteit**: Alleen relevante, betrouwbare AI-scholingen
-- ✅ **Actualiteit**: Regelmatig bijgewerkt overzicht  
-- ✅ **Toegankelijkheid**: Voor alle zorgprofessionals
-- ✅ **Gratis**: Deze service is volledig gratis
-
 **Vragen?** Neem contact op via GitHub of email.
