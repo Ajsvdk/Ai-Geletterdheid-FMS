@@ -2,6 +2,8 @@
 
 Welkom bij het overzicht van AI-scholingsmogelijkheden speciaal voor zorgprofessionals. Deze website biedt een toegankelijk en actueel overzicht van beschikbare educatieve bronnen over kunstmatige intelligentie in de gezondheidszorg.
 
+*Laatste update: 28 mei 2025 - Test rebuild*
+
 ## Waarom AI-scholing voor clinici?
 
 Kunstmatige intelligentie transformeert de gezondheidszorg in rap tempo. Voor zorgprofessionals is het essentieel om:
