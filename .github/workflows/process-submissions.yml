@@ -102,15 +102,29 @@ jobs:
           
           # Generate markdown table
           table_lines = [
-              "| Aanbieder | Titel |",
-              "|-----------|-------|"
+              "| Aanbieder | Titel | Doelgroep | Tijdsduur | Kosten | Link |",
+              "|-----------|-------|-----------|-----------|--------|------|"
           ]
           
           for row in rows[1:]:  # Skip header
               if len(row) >= 2:
-                  aanbieder = row[0].replace('|', '\\|')
-                  titel = row[1].replace('|', '\\|')
-                  table_lines.append(f"| {aanbieder} | {titel} |")
+                  # Escape pipe characters in all fields
+                  aanbieder = row[0].replace('|', '\\|') if len(row) > 0 else ""
+                  titel = row[1].replace('|', '\\|') if len(row) > 1 else ""
+                  doelgroep = row[2].replace('|', '\\|') if len(row) > 2 else ""
+                  tijdsduur = row[3].replace('|', '\\|') if len(row) > 3 else ""
+                  kosten = row[4].replace('|', '\\|') if len(row) > 4 else ""
+                  
+                  # Handle website/link column (index 5)
+                  link_cell = ""
+                  if len(row) > 5 and row[5].strip():
+                      website = row[5].strip()
+                      if website.startswith('http'):
+                          link_cell = f"[LINK]({website})"
+                      else:
+                          link_cell = website
+                  
+                  table_lines.append(f"| {aanbieder} | {titel} | {doelgroep} | {tijdsduur} | {kosten} | {link_cell} |")
           
           # Read current scholingsaanbod.md
           with open('docs/scholingsaanbod.md', 'r', encoding='utf-8') as f:
@@ -119,7 +133,7 @@ jobs:
           # Replace table section
           import re
           new_content = re.sub(
-              r'(\| Aanbieder \| Titel \|\n\|.*?\n)(.*?)(\n\n## Bijdragen)',
+              r'(\| Aanbieder \| Titel \| Doelgroep \| Tijdsduur \| Kosten \| Link \|\n\|.*?\n)(.*?)(\n\n## Bijdragen)',
               lambda m: m.group(1) + '\n'.join(table_lines[2:]) + m.group(3),
               content,
               flags=re.DOTALL
