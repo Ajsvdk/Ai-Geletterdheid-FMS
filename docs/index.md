@@ -8,21 +8,21 @@ Welkom bij het overzicht van AI-scholingsmogelijkheden speciaal voor zorgprofess
 
 Kunstmatige intelligentie transformeert de gezondheidszorg in rap tempo. Voor zorgprofessionals is het essentieel om:
 
-- 🎓 **De basis te begrijpen** van AI-technologie in medische toepassingen
-- 🔍 **Praktische vaardigheden** te ontwikkelen voor het werken met AI-tools
-- 📚 **Op de hoogte te blijven** van de laatste ontwikkelingen
-- 🤝 **Verantwoord te kunnen werken** met AI in de patiëntenzorg
+- **De basis te begrijpen** van AI-technologie in medische toepassingen
+- **Praktische vaardigheden** te ontwikkelen voor het werken met AI-tools
+- **Op de hoogte te blijven** van de laatste ontwikkelingen
+- **Verantwoord te kunnen werken** met AI in de patiëntenzorg
 
 ## Wat vindt u hier?
 
-### 📚 [Scholingsaanbod](SCHOLINGSAANBOD.html)
+### [Scholingsaanbod](SCHOLINGSAANBOD.html)
 Een compleet overzicht van beschikbare cursussen, trainingen en certificeringen:
 - Gratis en betaalde opties
 - Van basis tot expert niveau
 - Online en fysieke trainingen
 - Specifiek per specialisme
 
-### 🤲 [Bijdragen](bijdragen.html)
+### [Bijdragen](bijdragen.html)
 Help mee dit overzicht actueel te houden:
 - Voeg nieuwe scholingsmogelijkheden toe
 - Deel uw ervaringen
