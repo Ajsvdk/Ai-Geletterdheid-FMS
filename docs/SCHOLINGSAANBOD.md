@@ -1,4 +1,4 @@
-# Scholingsaanbod AI‑opleidingen voor Artsen
+# Scholingsaanbod AI-opleidingen voor Artsen
 
 <div class="course-filters">
     <input type="text" id="searchInput" placeholder="🔍 Zoeken..." class="search-input">

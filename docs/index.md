@@ -43,4 +43,4 @@ Dit platform is ontwikkeld voor:
 
 ---
 
-*Dit overzicht wordt regelmatig bijgewerkt. Laatste update: [datum]*
+*Dit overzicht wordt regelmatig bijgewerkt. Laatste update: 28 mei 2025*
