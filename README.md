@@ -1,40 +1,54 @@
-# AI-Geletterdheid FMS
+# AI Scholingsaanbod voor Clinici
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fajsvdk.github.io%2FAi-Geletterdheid-FMS%2F&up_message=online&down_message=offline&label=website)](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
+Een toegankelijk overzicht van beschikbare AI-scholingsmogelijkheden voor zorgprofessionals.
 
 🌐 **Website**: [ajsvdk.github.io/Ai-Geletterdheid-FMS](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
 
-Een overzicht en documentatie van het AI-onderwijsaanbod arten, medisch specialisten en andere zorgmedewerkers.
+## Over dit project
 
-## 📚 Over dit project
+Dit platform biedt een actueel overzicht van cursussen, trainingen en certificeringen op het gebied van kunstmatige intelligentie in de gezondheidszorg voor:
 
-Het doel is om AI-geletterdheid te bevorderen en toegankelijk te maken binnen de zorg.
+- Artsen (alle specialismen)
+- Verpleegkundigen  
+- Paramedici
+- Andere zorgprofessionals
 
-## 🚀 Aan de slag
+## Kenmerken
 
-De documentatie is beschikbaar via onze [GitHub Pages website](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/). Hier vind je:
+- 📋 **Compleet overzicht** van beschikbare scholingen
+- 🔍 **Filterbare lijst** op specialisme, niveau en kosten
+- 📊 **Excel-compatibel** voor eenvoudig beheer
+- 🤝 **Community-gedreven** met mogelijkheid tot bijdragen
 
-- Een compleet overzicht van het scholingsaanbod
-- Handleidingen en instructies
-- Bronnen en materialen
+## Lokaal draaien
 
-## 📖 Documentatie
+```bash
+# Installeer dependencies
+pip install -r requirements.txt
 
-- [Scholingsaanbod](docs/SCHOLINGSAANBOD.md) - Overzicht van beschikbare cursussen en trainingen
-- [Bijdragen](CONTRIBUTING.md) - Hoe kun je bijdragen aan dit project?
-- [Gedragscode](CODE_OF_CONDUCT.md) - Onze community richtlijnen
+# Start de development server
+mkdocs serve
+```
 
-## 🤝 Bijdragen
+## Deployment
 
-We verwelkomen bijdragen! Bekijk onze [bijdrage richtlijnen](CONTRIBUTING.md) voor meer informatie over hoe je kunt helpen dit project te verbeteren.
+De website wordt automatisch gedeployed naar GitHub Pages wanneer wijzigingen naar de `main` branch worden gepusht.
 
-## 📝 Licentie
+### Belangrijke bestanden:
+- `.github/workflows/pages.yml` - GitHub Actions workflow voor automatische deployment
+- `mkdocs.yml` - MkDocs configuratie
+- `requirements.txt` - Python dependencies
 
-Dit project is gelicenseerd onder de voorwaarden van de licentie die je kunt vinden in het [LICENSE](LICENSE) bestand.
+### GitHub Secrets vereist:
+- `ISSUE_TOKEN` - Voor het bijdragen formulier (optional)
 
-## 📞 Contact
+## Bijdragen
 
-Voor vragen of opmerkingen over dit project, neem contact op met A. van der Kuil.
+Wij verwelkomen bijdragen! Zie [CONTRIBUTING.md](CONTRIBUTING.md) voor meer informatie.
+
+## Licentie
+
+Dit project valt onder de MIT-licentie. Zie [LICENSE](LICENSE) voor details.
 
 ---
 

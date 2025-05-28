@@ -1,29 +1,46 @@
-# Scholingsaanbod AI voor Artsen
+# AI Scholingsaanbod voor Clinici
 
-*Laatste update: 23 april 2025*
+Welkom bij het overzicht van AI-scholingsmogelijkheden speciaal voor zorgprofessionals. Deze website biedt een toegankelijk en actueel overzicht van beschikbare educatieve bronnen over kunstmatige intelligentie in de gezondheidszorg.
 
+## Waarom AI-scholing voor clinici?
 
+Kunstmatige intelligentie transformeert de gezondheidszorg in rap tempo. Voor zorgprofessionals is het essentieel om:
 
-Dit is het voorlopige overzicht van scholingsaanbod in AI voor zorgmedewerkers, specifiek voor artsen.
-Work in progress. Ik hoor graag feedback.
+- 🎓 **De basis te begrijpen** van AI-technologie in medische toepassingen
+- 🔍 **Praktische vaardigheden** te ontwikkelen voor het werken met AI-tools
+- 📚 **Op de hoogte te blijven** van de laatste ontwikkelingen
+- 🤝 **Verantwoord te kunnen werken** met AI in de patiëntenzorg
 
-Doel:
+## Wat vindt u hier?
 
-- Het overzicht moet makkelijk bij te werken zijn
-  
-- Het overzicht moet beste aanbieders identificeren
-  
-- Het overzicht moet overzichtelijk zijn
+### 📋 [Scholingsaanbod](scholingsaanbod.md)
+Een compleet overzicht van beschikbare cursussen, trainingen en certificeringen:
+- Gratis en betaalde opties
+- Van basis tot expert niveau
+- Online en fysieke trainingen
+- Specifiek per specialisme
 
+### 🤲 [Bijdragen](bijdragen.md)
+Help mee dit overzicht actueel te houden:
+- Voeg nieuwe scholingsmogelijkheden toe
+- Deel uw ervaringen
+- Suggereer verbeteringen
+
+## Voor wie?
+
+Dit platform is ontwikkeld voor:
+- Artsen (alle specialismen)
+- Verpleegkundigen
+- Paramedici
+- Andere zorgprofessionals met interesse in AI
+
+## Snel starten
+
+1. Bekijk het [volledige scholingsaanbod](scholingsaanbod.md)
+2. Filter op uw specialisme of interesse
+3. Kies een cursus die past bij uw niveau
+4. Begin vandaag nog met leren!
 
 ---
-Voor een compleet overzicht van alle AI‑opleidingen, klik op [overzicht](SCHOLINGSAANBOD.md) in de bovenste navigatie.
 
-📌 **Je kunt  zelf opleidingen toevoegen via het formulier**  
-Ga naar [Bijdragen](bijdragen.md) om nieuwe scholing aan te dragen.
-
-
-
-
-
-A. van der Kuil
+*Dit overzicht wordt regelmatig bijgewerkt. Laatste update: [datum]*

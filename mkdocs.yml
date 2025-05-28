@@ -1,27 +1,40 @@
-site_name: "Scholingsaanbod AI voor Artsen"
+site_name: "AI Scholingsaanbod voor Clinici"
 site_url: https://ajsvdk.github.io/Ai-Geletterdheid-FMS/
 
 nav:
   - Home: index.md
-  - Overzicht: SCHOLINGSAANBOD.md
+  - Scholingsaanbod: scholingsaanbod.md
   - Bijdragen: bijdragen.md
-  - Status: status.md
+  - Over: over.md
 
 theme:
-  name: lumen         # ← Bootswatch-thema
-  logo: images/logo.png
-  favicon: images/favicon.ico
+  name: material
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.sections
-    - navigation.expand
     - navigation.top
     - search.suggest
     - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Naar donkere modus
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Naar lichte modus
+  language: nl
 
 plugins:
-  - search
+  - search:
+      lang: nl
 
 markdown_extensions:
   - admonition
@@ -30,12 +43,17 @@ markdown_extensions:
   - tables
   - attr_list
   - md_in_html
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-      emoji_index: !!python/name:pymdownx.emoji.gemoji
+  - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ajsvdk/Ai-Geletterdheid-FMS
 
 extra_css:
   - css/extra.css
