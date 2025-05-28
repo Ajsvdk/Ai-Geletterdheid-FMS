@@ -1,5 +1,6 @@
 site_name: "AI Scholingsaanbod voor Clinici"
 site_url: https://ajsvdk.github.io/Ai-Geletterdheid-FMS/
+use_directory_urls: true
 
 nav:
   - Home: index.md
