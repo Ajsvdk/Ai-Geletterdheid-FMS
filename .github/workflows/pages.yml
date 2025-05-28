@@ -70,11 +70,12 @@ jobs:
         env:
           TOKEN: ${{ secrets.ISSUE_TOKEN }}
         run: |
-          if [ -z "$TOKEN" ]; then
-            echo "::error::ISSUE_TOKEN secret ontbreekt"; exit 1;
+          if [ -n "$TOKEN" ]; then
+            find site -type f -name '*.html' -exec \
+              sed -i "s/__ISSUE_TOKEN__/${TOKEN}/g" {} +
+          else
+            echo "::warning::ISSUE_TOKEN secret not set, contribution form will not work"
           fi
-          find site -type f -name '*.html' -exec \
-            sed -i "s/__ISSUE_TOKEN__/${TOKEN}/g" {} +
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
