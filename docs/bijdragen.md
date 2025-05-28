@@ -1,183 +1,82 @@
-# Voeg een scholing toe
+# Nieuwe Scholing Toevoegen
 
-Gebruik onderstaand formulier om nieuwe AI-scholingsmogelijkheden aan te dragen.  
-De gegevens worden automatisch opgeslagen in deze GitHub-repo als een nieuw issue.
+Gebruik dit formulier om een nieuwe AI-scholing toe te voegen aan ons overzicht.
 
-<form id="scholingsformulier">
-  <div class="form-group">
-    <label for="aanbieder">Aanbieder*:</label>
-    <input name="aanbieder" id="aanbieder" required placeholder="Bijv. Radboudumc, HarvardX">
+## Snelle Toevoeging via GitHub
+
+Voor de snelste verwerking, [**klik hier om een nieuwe scholing toe te voegen**](https://github.com/Ajsvdk/Ai-Geletterdheid-FMS/issues/new?assignees=&labels=nieuwe-scholing&projects=&template=nieuwe-scholing.md&title=%5BNieuwe+Scholing%5D+).
+
+Dit opent een GitHub issue dat automatisch wordt verwerkt en toegevoegd aan het overzicht.
+
+---
+
+## Alternatief: Handmatig Formulier
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <div style="margin-bottom: 20px;">
+    <label for="aanbieder" style="display: block; margin-bottom: 5px; font-weight: bold;">Aanbieder *</label>
+    <input type="text" id="aanbieder" name="aanbieder" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
   </div>
 
-  <div class="form-group">
-    <label for="title">Titel van de opleiding*:</label>
-    <input name="title" id="title" required placeholder="Bijv. AI in de klinische praktijk">
+  <div style="margin-bottom: 20px;">
+    <label for="titel" style="display: block; margin-bottom: 5px; font-weight: bold;">Titel van de scholing *</label>
+    <input type="text" id="titel" name="titel" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
   </div>
 
-  <div class="form-group">
-    <label for="doelgroep">Doelgroep (Specialisme)*:</label>
-    <select name="doelgroep" id="doelgroep" required>
-      <option value="">Selecteer een specialisme</option>
-      <option value="Alle specialismen">Alle specialismen</option>
+  <div style="margin-bottom: 20px;">
+    <label for="doelgroep" style="display: block; margin-bottom: 5px; font-weight: bold;">Doelgroep/Specialisme *</label>
+    <select id="doelgroep" name="doelgroep" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+      <option value="">Selecteer specialisme...</option>
+      <option value="Algemeen">Algemeen (alle zorgprofessionals)</option>
       <option value="Allergologie">Allergologie</option>
       <option value="Anesthesiologie">Anesthesiologie</option>
       <option value="Cardiologie">Cardiologie</option>
-      <option value="Dermatologie en Venereologie">Dermatologie en Venereologie</option>
+      <option value="Cardiothoracale chirurgie">Cardiothoracale chirurgie</option>
+      <option value="Dermatologie">Dermatologie</option>
+      <option value="Gynaecologie">Gynaecologie</option>
       <option value="Heelkunde">Heelkunde</option>
-      <option value="Interne Geneeskunde">Interne Geneeskunde</option>
-      <option value="Keel-, Neus- en Oorheelkunde">Keel-, Neus- en Oorheelkunde</option>
-      <option value="Kindergeneeskunde">Kindergeneeskunde</option>
-      <option value="Klinisch Chemici">Klinisch Chemici</option>
-      <option value="Klinisch Fysici">Klinisch Fysici</option>
-      <option value="Klinische Genetica">Klinische Genetica</option>
-      <option value="Klinische Geriatrie">Klinische Geriatrie</option>
-      <option value="Longziekten en Tuberculose">Longziekten en Tuberculose</option>
-      <option value="Maag, Darm en Lever">Maag, Darm en Lever</option>
-      <option value="Medische Microbiologie">Medische Microbiologie</option>
-      <option value="Intensive Care">Intensive Care</option>
-      <option value="Neurochirurgie">Neurochirurgie</option>
+      <option value="Interne geneeskunde">Interne geneeskunde</option>
+      <option value="Klinische chemie">Klinische chemie</option>
       <option value="Neurologie">Neurologie</option>
-      <option value="Nucleaire Geneeskunde">Nucleaire Geneeskunde</option>
-      <option value="Obstetrie en Gynaecologie">Obstetrie en Gynaecologie</option>
-      <option value="Oogheelkunde">Oogheelkunde</option>
-      <option value="Orthopedie">Orthopedie</option>
-      <option value="Pathologie">Pathologie</option>
-      <option value="Plastische Chirurgie">Plastische Chirurgie</option>
-      <option value="Psychiatrie">Psychiatrie</option>
+      <option value="Oncologie">Oncologie</option>
       <option value="Radiologie">Radiologie</option>
-      <option value="Radiotherapie en Oncologie">Radiotherapie en Oncologie</option>
-      <option value="Reumatologie">Reumatologie</option>
-      <option value="Revalidatiegeneeskunde">Revalidatiegeneeskunde</option>
-      <option value="Sportgeneeskunde">Sportgeneeskunde</option>
-      <option value="Thoraxchirurgie">Thoraxchirurgie</option>
-      <option value="Urologie">Urologie</option>
-      <option value="Ziekenhuisfarmacie">Ziekenhuisfarmacie</option>
-      <option value="Ziekenhuisgeneeskunde">Ziekenhuisgeneeskunde</option>
+      <option value="Verpleegkunde">Verpleegkunde</option>
+      <option value="Overig">Overig</option>
     </select>
   </div>
 
-  <div class="form-group">
-    <label for="tijdsduur">Tijdsduur:</label>
-    <input name="tijdsduur" id="tijdsduur" placeholder="Bijv. 4 uur, 2 dagen, 6 weken">
+  <div style="margin-bottom: 20px;">
+    <label for="tijdsduur" style="display: block; margin-bottom: 5px; font-weight: bold;">Tijdsduur</label>
+    <input type="text" id="tijdsduur" name="tijdsduur" placeholder="bijv. 2 dagen, 4 uur, etc." style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
   </div>
 
-  <div class="form-group">
-    <label for="kosten">Kosten:</label>
-    <input name="kosten" id="kosten" placeholder="Bijv. Gratis, €495, €2500">
+  <div style="margin-bottom: 20px;">
+    <label for="kosten" style="display: block; margin-bottom: 5px; font-weight: bold;">Kosten</label>
+    <input type="text" id="kosten" name="kosten" placeholder="bijv. Gratis, €500, etc." style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
   </div>
 
-  <button type="submit">Verzenden</button>
+  <div style="margin-bottom: 20px;">
+    <label for="website" style="display: block; margin-bottom: 5px; font-weight: bold;">Website/Link</label>
+    <input type="url" id="website" name="website" placeholder="https://..." style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <label for="beschrijving" style="display: block; margin-bottom: 5px; font-weight: bold;">Korte beschrijving</label>
+    <textarea id="beschrijving" name="beschrijving" rows="4" placeholder="Korte beschrijving van de scholing..." style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+  </div>
+
+  <button type="submit" style="background-color: #009688; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+    Scholing Toevoegen
+  </button>
 </form>
 
-<div id="status" style="margin-top:1rem;"></div>
-
-<style>
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-  outline: none;
-  border-color: var(--md-primary-fg-color);
-  box-shadow: 0 0 0 2px var(--md-primary-fg-color--light);
-}
-
-button[type="submit"] {
-  background-color: var(--md-primary-fg-color);
-  color: white;
-  padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-button[type="submit"]:hover {
-  background-color: var(--md-primary-fg-color--dark);
-}
-
-#status {
-  padding: 1rem;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-#status.success {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-}
-
-#status.error {
-  background-color: #ffebee;
-  color: #c62828;
-}
-</style>
-
-<script>
-document.getElementById("scholingsformulier").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const data = new FormData(e.target);
-  const v = Object.fromEntries(data.entries());
-
-  const issueBody = `
-## Nieuwe AI-opleiding ingediend
-
-**Aanbieder**: ${v.aanbieder}
-**Titel**: ${v.title}
-**Doelgroep**: ${v.doelgroep}
-**Tijdsduur**: ${v.tijdsduur || 'Niet opgegeven'}
-**Kosten**: ${v.kosten || 'Niet opgegeven'}
-
 ---
-Deze inzending moet worden toegevoegd aan het scholingsaanbod.
-  `;
 
-  const statusEl = document.getElementById("status");
-  statusEl.textContent = "Verzenden...";
-  statusEl.className = "";
+## Waarom deze scholing toevoegen?
 
-  try {
-    const r = await fetch("https://api.github.com/repos/Ajsvdk/Ai-Geletterdheid-FMS/issues", {
-      method: "POST",
-      headers: {
-        "Authorization": "Bearer __ISSUE_TOKEN__",    // ← wordt door workflow vervangen
-        "Accept": "application/vnd.github+json"
-      },
-      body: JSON.stringify({
-        title: `Nieuwe opleiding: ${v.title}`,
-        body: issueBody,
-        labels: ["nieuwe-opleiding"]
-      })
-    });
+- ✅ **Kwaliteit**: Alleen relevante, betrouwbare AI-scholingen
+- ✅ **Actualiteit**: Regelmatig bijgewerkt overzicht  
+- ✅ **Toegankelijkheid**: Voor alle zorgprofessionals
+- ✅ **Gratis**: Deze service is volledig gratis
 
-    if (r.ok) {
-      statusEl.textContent = "✅ Bedankt! Je inzending is opgeslagen en wordt binnenkort verwerkt.";
-      statusEl.className = "success";
-      e.target.reset();
-    } else {
-      throw new Error("Verzenden mislukt");
-    }
-  } catch (error) {
-    statusEl.textContent = "❌ Er ging iets mis. Probeer het later opnieuw of neem contact op.";
-    statusEl.className = "error";
-  }
-});
-</script>
+**Vragen?** Neem contact op via GitHub of email.
