@@ -22,15 +22,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: light blue
+      primary: teal
+      accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Naar donkere modus
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: light blue
+      primary: teal
+      accent: deep orange
       toggle:
         icon: material/brightness-4
         name: Naar lichte modus
