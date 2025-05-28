@@ -1,7 +1,3 @@
-# AI Scholingsaanbod
-
-Overzicht van beschikbare AI-opleidingen voor zorgprofessionals.
-
 ## Cursussen en Trainingen
 
 | Aanbieder | Titel | Doelgroep | Tijdsduur | Kosten | Link |
