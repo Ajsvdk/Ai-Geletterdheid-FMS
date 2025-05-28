@@ -4,9 +4,9 @@ use_directory_urls: false
 
 nav:
   - Home: index.md
-  - Scholingsaanbod: SCHOLINGSAANBOD.html
-  - Bijdragen: bijdragen.html
-  - Over: over.html
+  - Scholingsaanbod: scholingsaanbod.md
+  - Bijdragen: bijdragen.md
+  - Over: over.md
 
 theme:
   name: material
@@ -15,6 +15,7 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - search.suggest
     - search.highlight
