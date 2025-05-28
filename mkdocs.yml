@@ -16,6 +16,7 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+    - toc.integrate
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
