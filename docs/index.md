@@ -15,7 +15,7 @@ Kunstmatige intelligentie transformeert de gezondheidszorg in rap tempo. Voor zo
 
 ## Wat vindt u hier?
 
-### �� [Scholingsaanbod](scholingsaanbod.html)
+### 📚 [Scholingsaanbod](SCHOLINGSAANBOD.html)
 Een compleet overzicht van beschikbare cursussen, trainingen en certificeringen:
 - Gratis en betaalde opties
 - Van basis tot expert niveau
@@ -38,7 +38,7 @@ Dit platform is ontwikkeld voor:
 
 ## Snel starten
 
-1. Bekijk het [volledige scholingsaanbod](scholingsaanbod.html)
+1. Bekijk het [volledige scholingsaanbod](SCHOLINGSAANBOD.html)
 2. Filter op uw specialisme of interesse
 3. Kies een cursus die past bij uw niveau
 4. Begin vandaag nog met leren!
