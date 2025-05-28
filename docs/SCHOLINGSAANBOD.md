@@ -39,4 +39,4 @@ Overzicht van beschikbare AI-opleidingen voor zorgprofessionals.
 
 ## Bijdragen
 
-Heeft u een AI-opleiding die nog niet in dit overzicht staat? [Voeg hem toe](bijdragen.md)!
+Heeft u een AI-opleiding die nog niet in dit overzicht staat? [Voeg hem toe](bijdragen.html)!

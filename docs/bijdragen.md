@@ -1,5 +1,10 @@
+# Bijdragen aan het AI Scholingsaanbod
 
-## Scholingsaanbod toegen
+Help mee dit overzicht actueel en compleet te houden door nieuwe AI-scholingsmogelijkheden toe te voegen.
+
+## Nieuwe scholing toevoegen
+
+Vul het onderstaande formulier in om een nieuwe AI-scholing toe te voegen aan het overzicht:
 
 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
   <div style="margin-bottom: 20px;">
@@ -58,4 +63,7 @@
     Scholing Toevoegen
   </button>
 </form>
-**Vragen?** Neem contact op via GitHub of email.
+
+---
+
+**Vragen?** Neem contact op via de repository of email.

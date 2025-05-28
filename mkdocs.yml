@@ -4,7 +4,7 @@ use_directory_urls: false
 
 nav:
   - Home: index.md
-  - Scholingsaanbod: SCHOLINGSAANBOD.html
+  - Scholingsaanbod: scholingsaanbod.md
   - Bijdragen: bijdragen.md
   - Over: over.md
 
@@ -13,9 +13,9 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.top
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.top
     - search.suggest
     - search.highlight
     - toc.integrate
