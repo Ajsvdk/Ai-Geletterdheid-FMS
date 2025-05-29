@@ -170,7 +170,6 @@ def generate_table_from_csv():
     # Generate filter controls
     filter_html = f'''
 <div style="margin-bottom: 20px; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
-    <h3>Filters</h3>
     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         <div>
             <label for="doelgroep-filter" style="font-weight: bold;">Doelgroep:</label>
