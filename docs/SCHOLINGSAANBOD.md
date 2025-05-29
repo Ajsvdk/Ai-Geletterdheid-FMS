@@ -2,7 +2,7 @@
 
 
 <div style="margin-bottom: 20px; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
-    
+    <h3>Filters</h3>
     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         <div>
             <label for="doelgroep-filter" style="font-weight: bold;">Doelgroep:</label>
@@ -298,53 +298,70 @@
 
 <script>
 function filterTable() {
+    console.log('Filter function called'); // Debug log
+    
     const doelgroepFilter = document.getElementById('doelgroep-filter').value;
     const tijdsduurFilter = document.getElementById('tijdsduur-filter').value;
     const kostenFilter = document.getElementById('kosten-filter').value;
     
-    const table = document.getElementById('course-table');
-    const rows = table.getElementsByTagName('tr');
+    console.log('Filters:', doelgroepFilter, tijdsduurFilter, kostenFilter); // Debug log
     
-    // Start from row 1 to skip header
-    for (let i = 1; i < rows.length; i++) {
+    const table = document.getElementById('course-table');
+    const tbody = table.getElementsByTagName('tbody')[0];
+    const rows = tbody.getElementsByTagName('tr');
+    
+    console.log('Found', rows.length, 'rows'); // Debug log
+    
+    // Filter each row
+    for (let i = 0; i < rows.length; i++) {
         const row = rows[i];
         const cells = row.getElementsByTagName('td');
         
-        if (cells.length >= 6) {
-            const doelgroep = cells[3].textContent.trim(); // Column 3 (0-indexed: Logo, Aanbieder, Titel, Doelgroep)
-            const tijdsduur = cells[4].textContent.trim(); // Column 4
-            const kosten = cells[5].textContent.trim();    // Column 5
+        if (cells.length >= 7) {
+            // Get cell content (0=Logo, 1=Aanbieder, 2=Titel, 3=Doelgroep, 4=Tijdsduur, 5=Kosten, 6=Link)
+            const doelgroep = cells[3].textContent.trim();
+            const tijdsduur = cells[4].textContent.trim();
+            const kosten = cells[5].textContent.trim();
             
             // Categorize cost
             let kostenCategory = 'onbekend';
             if (kosten.includes('€0') || kosten.toLowerCase().includes('gratis') || kosten === '0') {
                 kostenCategory = 'gratis';
-            } else if (kosten.trim() !== '' && kosten.trim() !== 'n.v.t.') {
+            } else if (kosten.trim() !== '' && kosten.trim() !== 'n.v.t.' && kosten.trim() !== 'onbekend') {
                 kostenCategory = 'betaald';
             }
             
             let showRow = true;
             
-            // Apply filters
+            // Apply doelgroep filter
             if (doelgroepFilter !== 'alle' && doelgroep !== doelgroepFilter) {
                 showRow = false;
             }
             
+            // Apply tijdsduur filter
             if (tijdsduurFilter !== 'alle') {
                 const tijdsduurLower = tijdsduur.toLowerCase();
-                if (tijdsduurFilter === 'kort' && !tijdsduurLower.includes('uur') && !tijdsduurLower.includes('minuten')) {
-                    showRow = false;
-                } else if (tijdsduurFilter === 'middel' && !tijdsduurLower.includes('dag')) {
-                    showRow = false;
-                } else if (tijdsduurFilter === 'lang' && !tijdsduurLower.includes('week') && !tijdsduurLower.includes('maand')) {
-                    showRow = false;
+                if (tijdsduurFilter === 'kort') {
+                    if (!tijdsduurLower.includes('uur') && !tijdsduurLower.includes('minuten')) {
+                        showRow = false;
+                    }
+                } else if (tijdsduurFilter === 'middel') {
+                    if (!tijdsduurLower.includes('dag')) {
+                        showRow = false;
+                    }
+                } else if (tijdsduurFilter === 'lang') {
+                    if (!tijdsduurLower.includes('week') && !tijdsduurLower.includes('maand')) {
+                        showRow = false;
+                    }
                 }
             }
             
+            // Apply kosten filter
             if (kostenFilter !== 'alle' && kostenCategory !== kostenFilter) {
                 showRow = false;
             }
             
+            // Show or hide row
             row.style.display = showRow ? '' : 'none';
         }
     }
@@ -352,9 +369,24 @@ function filterTable() {
 
 // Add event listeners when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('doelgroep-filter').addEventListener('change', filterTable);
-    document.getElementById('tijdsduur-filter').addEventListener('change', filterTable);
-    document.getElementById('kosten-filter').addEventListener('change', filterTable);
+    console.log('DOM loaded, adding event listeners'); // Debug log
+    
+    const doelgroepFilter = document.getElementById('doelgroep-filter');
+    const tijdsduurFilter = document.getElementById('tijdsduur-filter');
+    const kostenFilter = document.getElementById('kosten-filter');
+    
+    if (doelgroepFilter) {
+        doelgroepFilter.addEventListener('change', filterTable);
+        console.log('Doelgroep filter listener added');
+    }
+    if (tijdsduurFilter) {
+        tijdsduurFilter.addEventListener('change', filterTable);
+        console.log('Tijdsduur filter listener added');
+    }
+    if (kostenFilter) {
+        kostenFilter.addEventListener('change', filterTable);
+        console.log('Kosten filter listener added');
+    }
 });
 </script>
 

@@ -96,7 +96,7 @@ Dit project valt onder de [Apache 2.0 licentie](LICENSE). Je bent vrij om de cod
 
 ---
 
-**Auteur**: A.J.S. (Auke) van der Kuil  
+**Beheerder**: A.J.S. (Auke) van der Kuil  
 **In opdracht van**: Commissie A.I. van de [Federatie Medisch Specialisten (FMS)](https://demedischspecialist.nl/themas/thema/artificial-intelligence-ai)
 
 *Dit overzicht wordt regelmatig bijgewerkt en leeft door jullie bijdragen.*
