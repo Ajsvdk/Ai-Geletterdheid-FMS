@@ -66,4 +66,4 @@ Vul het onderstaande formulier in om een nieuwe AI-scholing toe te voegen aan he
 
 ---
 
-**Vragen?** Neem contact op via de repository of email.
+**Vragen?** Neem contact op via [aionderwijszorg@gmail.com](mailto:aionderwijszorg@gmail.com) of via de GitHub repository.

@@ -23,7 +23,7 @@ Met de snelle ontwikkeling van AI in de gezondheidszorg wordt het steeds belangr
 
 Heeft u vragen, suggesties of wilt u bijdragen? Neem dan contact op via:
 - GitHub: [Ai-Geletterdheid-FMS](https://github.com/ajsvdk/Ai-Geletterdheid-FMS)
-- Email: [contact informatie]
+- Email: [aionderwijszorg@gmail.com](mailto:aionderwijszorg@gmail.com)
 
 ---
 

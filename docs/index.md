@@ -1,47 +1,46 @@
-# AI Scholingsaanbod voor Clinici
+# AI-geletterdheid in de zorg: een praktisch overzicht
 
-Welkom bij het overzicht van AI-scholingsmogelijkheden speciaal voor zorgprofessionals. Deze website biedt een toegankelijk en actueel overzicht van beschikbare educatieve bronnen over kunstmatige intelligentie in de gezondheidszorg.
+De zorgsector bevindt zich in een stroomversnelling door de opkomst van kunstmatige intelligentie (AI). Medische professionals krijgen in toenemende mate te maken met AI-toepassingen die klinische besluitvorming kunnen ondersteunen, processen efficiënter maken en de kwaliteit van zorg kunnen verbeteren. Tegelijkertijd vormt dit een ontwikkeling waar veel over gespeculeerd wordt. Waar vind je betrouwbare en toegankelijke informatie?
 
-*Laatste update: 28 mei 2025 *
+Hoewel opleidingen en nascholingsprogramma's geleidelijk worden aangepast, is er nu al behoefte aan overzicht. Zorgprofessionals zoeken naar manieren waarop zij zich kunnen oriënteren op het onderwijsaanbod rondom AI, toegespitst op de zorgprofessional.
 
-## Waarom AI-scholing voor clinici?
+Deze open source website biedt een actueel en dynamisch overzicht van beschikbaar AI-onderwijs voor zorgprofessionals. Je vindt er een selectie van cursussen, e-modules en andere leeractiviteiten, inclusief praktische informatie zoals tijdsinvestering, kosten en doelgroepen.
 
-Kunstmatige intelligentie transformeert de gezondheidszorg in rap tempo. Voor zorgprofessionals is het essentieel om:
+Bekijk het aanbod en kies iets dat bij je past om begin vandaag te investeren in de kennis die je morgen misschien nodig hebt!
 
-- **De basis te begrijpen** van AI-technologie in medische toepassingen
-- **Praktische vaardigheden** te ontwikkelen voor het werken met AI-tools
-- **Op de hoogte te blijven** van de laatste ontwikkelingen
-- **Verantwoord te kunnen werken** met AI in de patiëntenzorg
+## Belangrijke kanttekening
+
+Deze site pretendeert geen volledig overzicht te geven van al het beschikbare onderwijs online en offline met betrekking tot informatiekunde, datawetenschap of AI middelen. Daarvoor ontbreekt het ons aan middelen. Wat nodig we jullie uit om aanvullingen aan te dragen via het menu "Bijdragen". Ingezonden suggesties worden opgenomen op relevantie en volledigheid, met als doel de kwaliteit van het overzicht te bewaken en spam te voorkomen. Ze worden niet op inhoudelijke gronden beoordeeld.
 
 ## Wat vindt u hier?
 
-### [Scholingsaanbod](SCHOLINGSAANBOD.html)
+### [Scholingsaanbod](scholingsaanbod.md)
 Een overzicht van beschikbare cursussen, trainingen en certificeringen:
-- Gratis en betaalde opties
+- Gratis en betaalde opties  
 - Online en fysieke trainingen
-- Specifiek per specialisme
+- Voor verschillende doelgroepen en specialismen
 
-### [Bijdragen](bijdragen.html)
-Help mee dit overzicht actueel te houden:
+### [Bijdragen](bijdragen.md)
+Help mee dit overzicht actueel en dynamisch te houden:
 - Voeg nieuwe scholingsmogelijkheden toe
 - Suggereer verbeteringen of aanpassingen
 
 ## Voor wie?
 
-Dit platform is ontwikkeld voor:
+Dit platform is ontwikkeld voor alle zorgprofessionals die zich willen oriënteren op AI-onderwijs:
 - Artsen (alle specialismen)
-- Verpleegkundigen
+- Verpleegkundigen  
 - Physician assistants en verpleegkundige specialisten
 - Paramedici
 - Andere zorgprofessionals met interesse in AI
 
 ## Snel starten
 
-1. Bekijk het [volledige scholingsaanbod](SCHOLINGSAANBOD.html)
-2. Filter op uw specialisme of interesse
-3. Kies een cursus die past bij u
+1. Bekijk het [volledige scholingsaanbod](scholingsaanbod.md)
+2. Oriënteer je op wat bij jouw situatie past
+3. Investeer in kennis die relevant is voor jouw praktijk
 4. Begin vandaag nog met leren!
 
 ---
 
-*Dit overzicht wordt regelmatig bijgewerkt. Laatste update: 28 mei 2025*
+*Dit overzicht wordt regelmatig bijgewerkt en leeft door jullie bijdragen.*
