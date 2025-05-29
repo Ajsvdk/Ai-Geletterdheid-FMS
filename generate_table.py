@@ -4,6 +4,27 @@ Script to generate the scholingsaanbod table from CSV data
 """
 import csv
 import os
+from urllib.parse import urlparse
+
+def get_favicon_url(website_url, size=16):
+    """Generate favicon URL using Google's favicon API"""
+    if not website_url or not website_url.startswith('http'):
+        return ""
+    
+    try:
+        # Extract domain from URL
+        parsed_url = urlparse(website_url)
+        domain = parsed_url.netloc
+        
+        # Remove 'www.' prefix if present
+        if domain.startswith('www.'):
+            domain = domain[4:]
+            
+        # Generate Google favicon API URL
+        favicon_url = f"https://www.google.com/s2/favicons?domain={domain}&sz={size}"
+        return favicon_url
+    except:
+        return ""
 
 def generate_table_from_csv():
     csv_file = 'docs/ai_courses_cleaned.csv'
@@ -22,10 +43,10 @@ def generate_table_from_csv():
         print("Not enough data in CSV")
         return
     
-    # Generate markdown table
+    # Generate markdown table with logo column
     table_lines = [
-        "| Aanbieder | Titel | Doelgroep | Tijdsduur | Kosten | Link |",
-        "|-----------|-------|-----------|-----------|--------|------|"
+        "| Logo | Aanbieder | Titel | Doelgroep | Tijdsduur | Kosten | Link |",
+        "|------|-----------|-------|-----------|-----------|--------|------|"
     ]
     
     for row in rows[1:]:  # Skip header
@@ -38,12 +59,18 @@ def generate_table_from_csv():
             kosten = row[4].replace('|', '\\|') if len(row) > 4 else ""
             link = row[5].strip() if len(row) > 5 else ""
             
+            # Generate favicon for logo column
+            favicon_url = get_favicon_url(link)
+            logo_cell = ""
+            if favicon_url:
+                logo_cell = f'<img src="{favicon_url}" alt="{aanbieder}" width="16" height="16" style="vertical-align: middle;">'
+            
             # Handle link column
             link_cell = ""
             if link and link.startswith('http'):
                 link_cell = f"[LINK]({link})"
             
-            table_lines.append(f"| {aanbieder} | {titel} | {doelgroep} | {tijdsduur} | {kosten} | {link_cell} |")
+            table_lines.append(f"| {logo_cell} | {aanbieder} | {titel} | {doelgroep} | {tijdsduur} | {kosten} | {link_cell} |")
     
     # Generate complete markdown content
     content = f"""# AI Scholingsaanbod
