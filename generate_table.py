@@ -33,10 +33,10 @@ def generate_table_from_csv():
             # Escape pipe characters in all fields
             aanbieder = row[0].replace('|', '\\|') if len(row) > 0 else ""
             titel = row[1].replace('|', '\\|') if len(row) > 1 else ""
-            link = row[2].strip() if len(row) > 2 else ""
-            doelgroep = row[3].replace('|', '\\|') if len(row) > 3 else ""
-            tijdsduur = row[4].replace('|', '\\|') if len(row) > 4 else ""
-            kosten = row[5].replace('|', '\\|') if len(row) > 5 else ""
+            doelgroep = row[2].replace('|', '\\|') if len(row) > 2 else ""
+            tijdsduur = row[3].replace('|', '\\|') if len(row) > 3 else ""
+            kosten = row[4].replace('|', '\\|') if len(row) > 4 else ""
+            link = row[5].strip() if len(row) > 5 else ""
             
             # Handle link column
             link_cell = ""

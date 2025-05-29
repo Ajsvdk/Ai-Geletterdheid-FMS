@@ -36,7 +36,7 @@ Vul het onderstaande formulier in om een nieuwe AI-scholing toe te voegen aan he
       <option value="Radiologie">Radiologie</option>
       <option value="Verpleegkunde">Verpleegkunde</option>
       <option value="Overig">Overig</option>
-    </select>
+    </select> 
   </div>
 
   <div style="margin-bottom: 20px;">
