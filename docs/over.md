@@ -26,8 +26,7 @@ Deze site is opgezet als open-source initiatief. Iedereen kan bijdragen:
 - **Onderwijs toevoegen** via het menu _Bijdragen_  
 - **Meeontwikkelen** via GitHub: [Ai-Geletterdheid-FMS](https://github.com/ajsvdk/Ai-Geletterdheid-FMS)  
 
-De inhoud is gepubliceerd onder een [MIT-licentie](https://opensource.org/licenses/MIT), wat betekent dat je vrij bent om de code of inhoud te hergebruiken, mits met bronvermelding.  
-We geloven in (internationale) samenwerking en openheid.
+De inhoud is gepubliceerd onder een [MIT-licentie](https://opensource.org/licenses/MIT), wat betekent dat je vrij bent om de code of inhoud te hergebruiken, mits met bronvermelding. We geloven in (internationale) samenwerking en openheid.
 
 ## Auteur en disclaimer
 

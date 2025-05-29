@@ -26,6 +26,15 @@ def get_favicon_url(website_url, size=16):
     except:
         return ""
 
+def truncate_text(text, max_length):
+    """Truncate text if it's longer than max_length and add ellipsis"""
+    if not text:
+        return ""
+    text = text.strip()
+    if len(text) <= max_length:
+        return text
+    return text[:max_length-3] + "..."
+
 def categorize_cost(cost_str):
     """Categorize cost as 'gratis' or 'betaald'"""
     if not cost_str or cost_str.strip() == "":
@@ -197,10 +206,18 @@ def generate_table_from_csv():
             if link and link.startswith('http'):
                 link_cell = f'<a href="{link}" target="_blank">LINK</a>'
             
+            # Truncate long text for display but keep full text for tooltip
+            aanbieder_display = truncate_text(aanbieder, 25)
+            titel_display = truncate_text(titel, 40)
+            
+            # Add title attribute for tooltip if text was truncated
+            aanbieder_cell = f'<span title="{aanbieder}">{aanbieder_display}</span>' if len(aanbieder) > 25 else aanbieder_display
+            titel_cell = f'<span title="{titel}">{titel_display}</span>' if len(titel) > 40 else titel_display
+            
             table_lines.append(f'''<tr style="border: 1px solid #ddd;">
     <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">{logo_cell}</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">{aanbieder}</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">{titel}</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">{aanbieder_cell}</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">{titel_cell}</td>
     <td style="border: 1px solid #ddd; padding: 8px;">{doelgroep}</td>
     <td style="border: 1px solid #ddd; padding: 8px;">{tijdsduur}</td>
     <td style="border: 1px solid #ddd; padding: 8px;">{kosten}</td>
