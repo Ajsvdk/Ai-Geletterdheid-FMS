@@ -1,4 +1,8 @@
-# AI-geletterdheid in de zorg: een praktisch overzicht
+# AI Scholingsaanbod
+
+Overzicht van beschikbare AI-opleidingen voor zorgprofessionals.
+
+## Cursussen en Trainingen
 
 
 <div style="margin-bottom: 20px; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
@@ -246,6 +250,51 @@
     <td style="border: 1px solid #ddd; padding: 8px;">1 dag</td>
     <td style="border: 1px solid #ddd; padding: 8px;">€0</td>
     <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><a href="http://www.dlinrt.org" target="_blank">LINK</a></td>
+</tr>
+<tr style="border: 1px solid #ddd;">
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><img src="https://www.google.com/s2/favicons?domain=myesr.org&sz=16" alt="ESR" width="16" height="16" style="vertical-align: middle;"></td>
+    <td style="border: 1px solid #ddd; padding: 8px;">ESR</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Masterclass in AI</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Radiologie</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">1 jaar</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">€410</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><a href="https://www.myesr.org/education/premium-education-package/" target="_blank">LINK</a></td>
+</tr>
+<tr style="border: 1px solid #ddd;">
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><img src="https://www.google.com/s2/favicons?domain=siim.org&sz=16" alt="SIIM" width="16" height="16" style="vertical-align: middle;"></td>
+    <td style="border: 1px solid #ddd; padding: 8px;">SIIM</td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><span title="AI for Imaging Informatics IT Professionals">AI for Imaging Informatics IT Profess...</span></td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Overig</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">1 dag</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">$599/$899</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><a href="https://siim.org/learning-events/learning/ai4it/" target="_blank">LINK</a></td>
+</tr>
+<tr style="border: 1px solid #ddd;">
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><img src="https://www.google.com/s2/favicons?domain=eusomii.org&sz=16" alt="European Society of Imaging Informatics" width="16" height="16" style="vertical-align: middle;"></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><span title="European Society of Imaging Informatics">European Society of Im...</span></td>
+    <td style="border: 1px solid #ddd; padding: 8px;">EuSoMII Annual Meeting</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Radiologie</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">2 dagen</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">€220/€270</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><a href="https://www.eusomii.org/eusomii-annual-meeting-2025/" target="_blank">LINK</a></td>
+</tr>
+<tr style="border: 1px solid #ddd;">
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><img src="https://www.google.com/s2/favicons?domain=eusomii.org&sz=16" alt="EuSoMII" width="16" height="16" style="vertical-align: middle;"></td>
+    <td style="border: 1px solid #ddd; padding: 8px;">EuSoMII</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">EuSoMII Webinars</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Radiologie</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">1 uur</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">€0</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><a href="https://www.eusomii.org/webinars/" target="_blank">LINK</a></td>
+</tr>
+<tr style="border: 1px solid #ddd;">
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><img src="https://www.google.com/s2/favicons?domain=americancollegeaim.org&sz=16" alt="American College of Artificial Intelligence and Medicine" width="16" height="16" style="vertical-align: middle;"></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><span title="American College of Artificial Intelligence and Medicine">American College of Ar...</span></td>
+    <td style="border: 1px solid #ddd; padding: 8px;"><span title="Annual National meeting of American College of Artificial Intelligence and Medicine">Annual National meeting of American C...</span></td>
+    <td style="border: 1px solid #ddd; padding: 8px;">Algemeen</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">2 dagen</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">$300</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><a href="https://americancollegeaim.org/" target="_blank">LINK</a></td>
 </tr>
 </tbody>
 </table>
