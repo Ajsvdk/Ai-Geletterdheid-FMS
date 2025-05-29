@@ -7,14 +7,14 @@
   [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
   [![GitHub Pages](https://img.shields.io/badge/deployed%20on-GitHub%20Pages-blue?style=flat-square&logo=github)](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
 
-  De zorgsector bevindt zich in een stroomversnelling door de opkomst van kunstmatige intelligentie (AI). Deze open source website biedt een actueel en dynamisch overzicht van beschikbaar AI-onderwijs voor zorgprofessionals.
+  De zorgsector bevindt zich in een stroomversnelling door de opkomst van kunstmatige intelligentie (AI). Deze open source website biedt een actueel overzicht van beschikbaar AI-onderwijs voor zorgprofessionals.
 
   🌐 **Live website**: [ajsvdk.github.io/Ai-Geletterdheid-FMS](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
 </div>
 
 ## Waarom dit platform?
 
-Zorgprofessionals zoeken naar manieren waarop zij zich kunnen oriënteren op het onderwijsaanbod rondom AI, toegespitst op de zorgprofessional. Met de komst van de Europese AI-verordening is AI-geletterdheid niet alleen handig, maar ook een wettelijke verplichting.
+Zorgprofessionals zoeken naar manieren waarop zij zich kunnen oriënteren op het onderwijsaanbod rondom AI, toegespitst op de zorgprofessional. Met de komst van de Europese AI-verordening is AI-geletterdheid niet alleen leuk of handig, maar ook een wettelijke verplichting.
 
 Deze site helpt je bij het vinden van:
 - Cursussen en e-modules over AI in de zorg
@@ -22,13 +22,6 @@ Deze site helpt je bij het vinden van:
 - Training op verschillende niveaus: van basis tot expert
 - Specifieke scholing per specialisme
 
-## Wat maakt deze site bijzonder?
-
-- 🔍 **Interactieve filters** op doelgroep, tijdsduur en kosten (gratis/betaald)
-- 🏢 **Automatische logo's** van aanbieders voor snelle herkenning
-- 📱 **Responsive design** met tooltips voor volledige informatie
-- 🤝 **Community-gedreven** - leeft door jullie bijdragen
-- ⚡ **Real-time filtering** zonder pagina refresh
 
 ## Voor ontwikkelaars
 
