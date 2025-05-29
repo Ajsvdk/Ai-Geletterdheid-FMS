@@ -4,23 +4,28 @@
   <circle cx="50" cy="50" r="48" fill="white" stroke="#333" stroke-width="2"/>
   
   <!-- Stethoscope earpieces -->
-  <ellipse cx="38" cy="25" rx="3" ry="4" fill="#333" transform="rotate(-20 38 25)"/>
-  <ellipse cx="62" cy="25" rx="3" ry="4" fill="#333" transform="rotate(20 62 25)"/>
+  <ellipse cx="35" cy="20" rx="3" ry="4" fill="#333" transform="rotate(-20 35 20)"/>
+  <ellipse cx="65" cy="20" rx="3" ry="4" fill="#333" transform="rotate(20 65 20)"/>
   
   <!-- Stethoscope tubes from earpieces -->
-  <path d="M 38 28 Q 35 35 35 42" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M 62 28 Q 65 35 65 42" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 35 23 Q 32 30 32 37" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 65 23 Q 68 30 68 37" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
   
-  <!-- Main tube body -->
-  <path d="M 35 42 Q 50 45 65 42" stroke="#333" stroke-width="3" fill="none"/>
+  <!-- Main tube connection -->
+  <path d="M 32 37 Q 50 40 68 37" stroke="#333" stroke-width="3" fill="none"/>
   
-  <!-- Main stethoscope tube going down -->
-  <path d="M 50 44 L 50 65" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Sigmoid function curve (S-shaped) - this is the key element! -->
+  <path d="M 50 42 Q 45 50 45 58 Q 45 66 50 74" stroke="#e74c3c" stroke-width="4" fill="none" stroke-linecap="round"/>
   
-  <!-- Chest piece (diaphragm) -->
-  <circle cx="50" cy="68" r="6" fill="#333" stroke="#333" stroke-width="2"/>
+  <!-- Chest piece (diaphragm) "listening" to the sigmoid -->
+  <circle cx="50" cy="76" r="6" fill="#333" stroke="#333" stroke-width="2"/>
   
-  <!-- Small decorative elements on the tube -->
-  <circle cx="42" cy="58" r="2" fill="#e74c3c"/>
-  <path d="M 52 58 Q 58 60 58 65" stroke="#e74c3c" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Small data points along the sigmoid curve -->
+  <circle cx="48" cy="50" r="1.5" fill="#e74c3c"/>
+  <circle cx="47" cy="58" r="1.5" fill="#e74c3c"/>
+  <circle cx="52" cy="66" r="1.5" fill="#e74c3c"/>
+  
+  <!-- AI/Data visualization elements -->
+  <text x="75" y="55" font-family="Arial, sans-serif" font-size="8" fill="#666">f(x)</text>
+  <text x="75" y="70" font-family="Arial, sans-serif" font-size="6" fill="#666">AI</text>
 </svg> 

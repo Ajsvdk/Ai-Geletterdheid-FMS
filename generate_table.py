@@ -138,7 +138,7 @@ def generate_table_from_csv():
     # Generate filter controls
     filter_html = f'''
 <div style="margin-bottom: 20px; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
-    <h3>Filters</h3>
+    
     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         <div>
             <label for="doelgroep-filter" style="font-weight: bold;">Doelgroep:</label>
@@ -227,7 +227,7 @@ def generate_table_from_csv():
     table_lines.extend(['</tbody>', '</table>'])
     
     # Generate complete markdown content
-    content = f"""# # AI-geletterdheid in de zorg: een praktisch overzicht
+    content = f"""#  AI-geletterdheid in de zorg: een praktisch overzicht
 
 {filter_html}
 
