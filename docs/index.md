@@ -12,35 +12,6 @@ Bekijk het aanbod en kies iets dat bij je past om begin vandaag te investeren in
 
 Deze site pretendeert geen volledig overzicht te geven van al het beschikbare onderwijs online en offline met betrekking tot informatiekunde, datawetenschap of AI middelen. Daarvoor ontbreekt het ons aan middelen. Wat nodig we jullie uit om aanvullingen aan te dragen via het menu "Bijdragen". Ingezonden suggesties worden opgenomen op relevantie en volledigheid, met als doel de kwaliteit van het overzicht te bewaken en spam te voorkomen. Ze worden niet op inhoudelijke gronden beoordeeld.
 
-## Wat vindt u hier?
-
-### [Scholingsaanbod](scholingsaanbod.md)
-Een overzicht van beschikbare cursussen, trainingen en certificeringen:
-- Gratis en betaalde opties  
-- Online en fysieke trainingen
-- Voor verschillende doelgroepen en specialismen
-
-### [Bijdragen](bijdragen.md)
-Help mee dit overzicht actueel en dynamisch te houden:
-- Voeg nieuwe scholingsmogelijkheden toe
-- Suggereer verbeteringen of aanpassingen
-
-## Voor wie?
-
-Dit platform is ontwikkeld voor alle zorgprofessionals die zich willen oriënteren op AI-onderwijs:
-- Artsen (alle specialismen)
-- Verpleegkundigen  
-- Physician assistants en verpleegkundige specialisten
-- Paramedici
-- Andere zorgprofessionals met interesse in AI
-
-## Snel starten
-
-1. Bekijk het [volledige scholingsaanbod](scholingsaanbod.md)
-2. Oriënteer je op wat bij jouw situatie past
-3. Investeer in kennis die relevant is voor jouw praktijk
-4. Begin vandaag nog met leren!
-
 ---
 
 *Dit overzicht wordt regelmatig bijgewerkt en leeft door jullie bijdragen.*
