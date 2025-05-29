@@ -36,7 +36,7 @@ Deze site is samengesteld door:
 Student MSc. Geneeskunde en MSc. Artificial Intelligence  
 In opdracht van de commissie A.I. van de [Federatie Medisch Specialisten (FMS)](https://demedischspecialist.nl/themas/thema/artificial-intelligence-ai)
 
-De FMS heeft geen formele rol in het beheer of onderhoud van deze website. Zowel de auteut als de FMS zijn niet aansprakelijk voor eventuele inhoudelijke onjuistheden of onvolledigheden op deze site.
+De FMS heeft geen formele rol in het beheer of onderhoud van deze website. Zowel de auteur als de FMS zijn niet aansprakelijk voor eventuele inhoudelijke onjuistheden of onvolledigheden op deze site.
 
 ## Vragen of suggesties?
 

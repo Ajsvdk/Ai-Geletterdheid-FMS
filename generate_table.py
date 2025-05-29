@@ -227,11 +227,7 @@ def generate_table_from_csv():
     table_lines.extend(['</tbody>', '</table>'])
     
     # Generate complete markdown content
-    content = f"""# AI Scholingsaanbod
-
-Overzicht van beschikbare AI-opleidingen voor zorgprofessionals.
-
-## Cursussen en Trainingen
+    content = f"""# # AI-geletterdheid in de zorg: een praktisch overzicht
 
 {filter_html}
 

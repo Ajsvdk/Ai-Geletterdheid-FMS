@@ -1,8 +1,16 @@
-# AI-geletterdheid in de zorg: een praktisch overzicht
+<div align="center">
+  <img src="docs/assets/logo.svg" alt="AI-geletterdheid in de zorg" width="120" height="120">
+  
+  # AI-geletterdheid in de zorg: een praktisch overzicht
 
-De zorgsector bevindt zich in een stroomversnelling door de opkomst van kunstmatige intelligentie (AI). Deze open source website biedt een actueel en dynamisch overzicht van beschikbaar AI-onderwijs voor zorgprofessionals.
+  [![Website](https://img.shields.io/website?url=https%3A%2F%2Fajsvdk.github.io%2FAi-Geletterdheid-FMS%2F&up_message=live&up_color=brightgreen&down_message=offline&down_color=red&style=flat-square&label=status)](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
+  [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
+  [![GitHub Pages](https://img.shields.io/badge/deployed%20on-GitHub%20Pages-blue?style=flat-square&logo=github)](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
 
-🌐 **Live website**: [ajsvdk.github.io/Ai-Geletterdheid-FMS](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
+  De zorgsector bevindt zich in een stroomversnelling door de opkomst van kunstmatige intelligentie (AI). Deze open source website biedt een actueel en dynamisch overzicht van beschikbaar AI-onderwijs voor zorgprofessionals.
+
+  🌐 **Live website**: [ajsvdk.github.io/Ai-Geletterdheid-FMS](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
+</div>
 
 ## Waarom dit platform?
 
@@ -91,7 +99,7 @@ Deze site pretendeert geen volledig overzicht te geven van al het beschikbare on
 
 ## Licentie
 
-Dit project valt onder de [MIT-licentie](LICENSE). Je bent vrij om de code of inhoud te hergebruiken, mits met bronvermelding.
+Dit project valt onder de [Apache 2.0 licentie](LICENSE). Je bent vrij om de code of inhoud te hergebruiken, aan te passen en te distribueren, mits met bronvermelding en onder dezelfde licentievoorwaarden.
 
 ---
 
