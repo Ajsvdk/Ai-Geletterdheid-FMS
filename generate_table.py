@@ -26,6 +26,83 @@ def get_favicon_url(website_url, size=16):
     except:
         return ""
 
+def categorize_cost(cost_str):
+    """Categorize cost as 'gratis' or 'betaald'"""
+    if not cost_str or cost_str.strip() == "":
+        return "onbekend"
+    
+    cost_lower = cost_str.lower()
+    if "€0" in cost_str or "gratis" in cost_lower or cost_str.strip() == "0":
+        return "gratis"
+    else:
+        return "betaald"
+
+def generate_filter_javascript():
+    """Generate JavaScript for table filtering"""
+    return '''
+<script>
+function filterTable() {
+    const doelgroepFilter = document.getElementById('doelgroep-filter').value;
+    const tijdsduurFilter = document.getElementById('tijdsduur-filter').value;
+    const kostenFilter = document.getElementById('kosten-filter').value;
+    
+    const table = document.getElementById('course-table');
+    const rows = table.getElementsByTagName('tr');
+    
+    // Start from row 1 to skip header
+    for (let i = 1; i < rows.length; i++) {
+        const row = rows[i];
+        const cells = row.getElementsByTagName('td');
+        
+        if (cells.length >= 6) {
+            const doelgroep = cells[3].textContent.trim(); // Column 3 (0-indexed: Logo, Aanbieder, Titel, Doelgroep)
+            const tijdsduur = cells[4].textContent.trim(); // Column 4
+            const kosten = cells[5].textContent.trim();    // Column 5
+            
+            // Categorize cost
+            let kostenCategory = 'onbekend';
+            if (kosten.includes('€0') || kosten.toLowerCase().includes('gratis') || kosten === '0') {
+                kostenCategory = 'gratis';
+            } else if (kosten.trim() !== '' && kosten.trim() !== 'n.v.t.') {
+                kostenCategory = 'betaald';
+            }
+            
+            let showRow = true;
+            
+            // Apply filters
+            if (doelgroepFilter !== 'alle' && doelgroep !== doelgroepFilter) {
+                showRow = false;
+            }
+            
+            if (tijdsduurFilter !== 'alle') {
+                const tijdsduurLower = tijdsduur.toLowerCase();
+                if (tijdsduurFilter === 'kort' && !tijdsduurLower.includes('uur') && !tijdsduurLower.includes('minuten')) {
+                    showRow = false;
+                } else if (tijdsduurFilter === 'middel' && !tijdsduurLower.includes('dag')) {
+                    showRow = false;
+                } else if (tijdsduurFilter === 'lang' && !tijdsduurLower.includes('week') && !tijdsduurLower.includes('maand')) {
+                    showRow = false;
+                }
+            }
+            
+            if (kostenFilter !== 'alle' && kostenCategory !== kostenFilter) {
+                showRow = false;
+            }
+            
+            row.style.display = showRow ? '' : 'none';
+        }
+    }
+}
+
+// Add event listeners when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('doelgroep-filter').addEventListener('change', filterTable);
+    document.getElementById('tijdsduur-filter').addEventListener('change', filterTable);
+    document.getElementById('kosten-filter').addEventListener('change', filterTable);
+});
+</script>
+'''
+
 def generate_table_from_csv():
     csv_file = 'docs/ai_courses_cleaned.csv'
     md_file = 'docs/scholingsaanbod.md'
@@ -43,20 +120,70 @@ def generate_table_from_csv():
         print("Not enough data in CSV")
         return
     
-    # Generate markdown table with logo column
+    # Collect unique values for filters
+    doelgroepen = set()
+    for row in rows[1:]:
+        if len(row) > 2:
+            doelgroepen.add(row[2])
+    
+    # Generate filter controls
+    filter_html = f'''
+<div style="margin-bottom: 20px; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
+    <h3>Filters</h3>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div>
+            <label for="doelgroep-filter" style="font-weight: bold;">Doelgroep:</label>
+            <select id="doelgroep-filter" style="margin-left: 5px; padding: 5px;">
+                <option value="alle">Alle</option>
+                {chr(10).join([f'<option value="{doelgroep}">{doelgroep}</option>' for doelgroep in sorted(doelgroepen) if doelgroep.strip()])}
+            </select>
+        </div>
+        <div>
+            <label for="tijdsduur-filter" style="font-weight: bold;">Tijdsduur:</label>
+            <select id="tijdsduur-filter" style="margin-left: 5px; padding: 5px;">
+                <option value="alle">Alle</option>
+                <option value="kort">Kort (uren/minuten)</option>
+                <option value="middel">Middel (dagen)</option>
+                <option value="lang">Lang (weken/maanden)</option>
+            </select>
+        </div>
+        <div>
+            <label for="kosten-filter" style="font-weight: bold;">Kosten:</label>
+            <select id="kosten-filter" style="margin-left: 5px; padding: 5px;">
+                <option value="alle">Alle</option>
+                <option value="gratis">Gratis</option>
+                <option value="betaald">Betaald</option>
+            </select>
+        </div>
+    </div>
+</div>
+'''
+    
+    # Generate markdown table with logo column and ID for JavaScript
     table_lines = [
-        "| Logo | Aanbieder | Titel | Doelgroep | Tijdsduur | Kosten | Link |",
-        "|------|-----------|-------|-----------|-----------|--------|------|"
+        '<table id="course-table" style="width: 100%; border-collapse: collapse;">',
+        '<thead>',
+        '<tr style="background-color: #f0f0f0;">',
+        '<th style="border: 1px solid #ddd; padding: 8px;">Logo</th>',
+        '<th style="border: 1px solid #ddd; padding: 8px;">Aanbieder</th>',
+        '<th style="border: 1px solid #ddd; padding: 8px;">Titel</th>',
+        '<th style="border: 1px solid #ddd; padding: 8px;">Doelgroep</th>',
+        '<th style="border: 1px solid #ddd; padding: 8px;">Tijdsduur</th>',
+        '<th style="border: 1px solid #ddd; padding: 8px;">Kosten</th>',
+        '<th style="border: 1px solid #ddd; padding: 8px;">Link</th>',
+        '</tr>',
+        '</thead>',
+        '<tbody>'
     ]
     
     for row in rows[1:]:  # Skip header
         if len(row) >= 2 and row[0].strip() and row[1].strip():
-            # Escape pipe characters in all fields
-            aanbieder = row[0].replace('|', '\\|') if len(row) > 0 else ""
-            titel = row[1].replace('|', '\\|') if len(row) > 1 else ""
-            doelgroep = row[2].replace('|', '\\|') if len(row) > 2 else ""
-            tijdsduur = row[3].replace('|', '\\|') if len(row) > 3 else ""
-            kosten = row[4].replace('|', '\\|') if len(row) > 4 else ""
+            # Escape HTML characters in all fields
+            aanbieder = row[0].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;') if len(row) > 0 else ""
+            titel = row[1].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;') if len(row) > 1 else ""
+            doelgroep = row[2].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;') if len(row) > 2 else ""
+            tijdsduur = row[3].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;') if len(row) > 3 else ""
+            kosten = row[4].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;') if len(row) > 4 else ""
             link = row[5].strip() if len(row) > 5 else ""
             
             # Generate favicon for logo column
@@ -68,9 +195,19 @@ def generate_table_from_csv():
             # Handle link column
             link_cell = ""
             if link and link.startswith('http'):
-                link_cell = f"[LINK]({link})"
+                link_cell = f'<a href="{link}" target="_blank">LINK</a>'
             
-            table_lines.append(f"| {logo_cell} | {aanbieder} | {titel} | {doelgroep} | {tijdsduur} | {kosten} | {link_cell} |")
+            table_lines.append(f'''<tr style="border: 1px solid #ddd;">
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">{logo_cell}</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">{aanbieder}</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">{titel}</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">{doelgroep}</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">{tijdsduur}</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">{kosten}</td>
+    <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">{link_cell}</td>
+</tr>''')
+    
+    table_lines.extend(['</tbody>', '</table>'])
     
     # Generate complete markdown content
     content = f"""# AI Scholingsaanbod
@@ -79,7 +216,11 @@ Overzicht van beschikbare AI-opleidingen voor zorgprofessionals.
 
 ## Cursussen en Trainingen
 
+{filter_html}
+
 {chr(10).join(table_lines)}
+
+{generate_filter_javascript()}
 
 ## Bijdragen
 
@@ -90,7 +231,7 @@ Heeft u een AI-opleiding die nog niet in dit overzicht staat? [Voeg hem toe](bij
     with open(md_file, 'w', encoding='utf-8') as f:
         f.write(content)
     
-    print(f"Generated table with {len(table_lines)-2} entries")
+    print(f"Generated table with {len(table_lines)-4} entries")
 
 if __name__ == "__main__":
     generate_table_from_csv() 
