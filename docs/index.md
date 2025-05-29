@@ -2,7 +2,7 @@
 
 Welkom bij het overzicht van AI-scholingsmogelijkheden speciaal voor zorgprofessionals. Deze website biedt een toegankelijk en actueel overzicht van beschikbare educatieve bronnen over kunstmatige intelligentie in de gezondheidszorg.
 
-*Laatste update: 28 mei 2025 - gh-pages branch verwijderd*
+*Laatste update: 28 mei 2025 *
 
 ## Waarom AI-scholing voor clinici?
 
@@ -16,23 +16,22 @@ Kunstmatige intelligentie transformeert de gezondheidszorg in rap tempo. Voor zo
 ## Wat vindt u hier?
 
 ### [Scholingsaanbod](SCHOLINGSAANBOD.html)
-Een compleet overzicht van beschikbare cursussen, trainingen en certificeringen:
+Een overzicht van beschikbare cursussen, trainingen en certificeringen:
 - Gratis en betaalde opties
-- Van basis tot expert niveau
 - Online en fysieke trainingen
 - Specifiek per specialisme
 
 ### [Bijdragen](bijdragen.html)
 Help mee dit overzicht actueel te houden:
 - Voeg nieuwe scholingsmogelijkheden toe
-- Deel uw ervaringen
-- Suggereer verbeteringen
+- Suggereer verbeteringen of aanpassingen
 
 ## Voor wie?
 
 Dit platform is ontwikkeld voor:
 - Artsen (alle specialismen)
 - Verpleegkundigen
+- Physician assistants en verpleegkundige specialisten
 - Paramedici
 - Andere zorgprofessionals met interesse in AI
 
@@ -40,7 +39,7 @@ Dit platform is ontwikkeld voor:
 
 1. Bekijk het [volledige scholingsaanbod](SCHOLINGSAANBOD.html)
 2. Filter op uw specialisme of interesse
-3. Kies een cursus die past bij uw niveau
+3. Kies een cursus die past bij u
 4. Begin vandaag nog met leren!
 
 ---
