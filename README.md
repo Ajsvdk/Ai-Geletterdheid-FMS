@@ -49,6 +49,7 @@ Deze site is een open-source initiatief. Iedereen kan bijdragen. Denk je dat het
 - Draag bij aan de codebase via pull requests
 - Help mee met het verbeteren van het script voor tabelgeneratie
 - Automatiseer gegevensverwerking en validatie
+- Custom URL gebruiken 
 
 ## Lokaal draaien
 
