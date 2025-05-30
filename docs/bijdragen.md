@@ -6,7 +6,10 @@ Help mee dit overzicht actueel en compleet te houden door nieuwe AI-scholingsmog
 
 Vul het onderstaande formulier in om een nieuwe AI-scholing toe te voegen aan het overzicht:
 
-<form id="course-form" style="max-width: 600px; margin: 0 auto;">
+<form action="https://formspree.io/f/mpwraqgp" method="POST" style="max-width: 600px; margin: 0 auto;">
+  <input type="hidden" name="_subject" value="Nieuwe AI Scholing: [SCHOLING]" />
+  <input type="hidden" name="_next" value="https://ajsvdk.github.io/Ai-Geletterdheid-FMS/bijdragen/?success=true" />
+  
   <div style="margin-bottom: 20px;">
     <label for="aanbieder" style="display: block; margin-bottom: 5px; font-weight: bold;">Aanbieder *</label>
     <input type="text" id="aanbieder" name="aanbieder" required style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
@@ -65,98 +68,21 @@ Vul het onderstaande formulier in om een nieuwe AI-scholing toe te voegen aan he
     <textarea id="aanvullende-info" name="aanvullende-info" rows="3" placeholder="Andere relevante informatie (vereisten, certificering, etc.)" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
   </div>
 
-  <button type="submit" id="submit-btn" style="background-color: #009688; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%;">
-    ✅ Scholing Toevoegen
+  <button type="submit" style="background-color: #009688; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%;">
+    📧 Scholing Indienen
   </button>
-  
-  <div id="form-status" style="margin-top: 15px; padding: 10px; border-radius: 4px; display: none;"></div>
 </form>
 
 <script>
-document.getElementById('course-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const submitBtn = document.getElementById('submit-btn');
-    const statusDiv = document.getElementById('form-status');
-    
-    // Disable button and show loading
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '⏳ Bezig met verzenden...';
-    statusDiv.style.display = 'none';
-    
-    // Get form data
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
-    
-    // Create issue body
-    const issueBody = `**Aanbieder**
-${data.aanbieder}
-
-**Titel van de scholing**
-${data.titel}
-
-**Doelgroep/Specialisme**
-${data.doelgroep}
-
-**Tijdsduur**
-${data.tijdsduur || 'Niet opgegeven'}
-
-**Kosten**
-${data.kosten || 'Niet opgegeven'}
-
-**Website/Link**
-${data.website || 'Niet opgegeven'}
-
-**Beschrijving**
-${data.beschrijving || 'Niet opgegeven'}
-
-**Aanvullende informatie**
-${data['aanvullende-info'] || 'Niet opgegeven'}
-
----
-*Automatisch ingediend via het website formulier*`;
-
-    try {
-        // Submit to GitHub Issues API
-        const response = await fetch('https://api.github.com/repos/Ajsvdk/Ai-Geletterdheid-FMS/issues', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/vnd.github+json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                title: `[SCHOLING] ${data.titel} - ${data.aanbieder}`,
-                body: issueBody,
-                labels: ['nieuwe-scholing']
-            })
-        });
-
-        if (response.ok) {
-            // Success
-            statusDiv.innerHTML = '✅ <strong>Bedankt!</strong> Je scholing is succesvol ingediend en wordt binnenkort gecontroleerd.';
-            statusDiv.style.display = 'block';
-            statusDiv.style.backgroundColor = '#d4edda';
-            statusDiv.style.color = '#155724';
-            statusDiv.style.border = '1px solid #c3e6cb';
-            
-            // Reset form
-            e.target.reset();
-        } else {
-            throw new Error('Failed to submit');
-        }
-    } catch (error) {
-        // Error - fallback to email
-        statusDiv.innerHTML = '⚠️ <strong>Probleem bij verzenden.</strong> Stuur je gegevens naar <a href="mailto:aionderwijszorg@gmail.com">aionderwijszorg@gmail.com</a>';
-        statusDiv.style.display = 'block';
-        statusDiv.style.backgroundColor = '#fff3cd';
-        statusDiv.style.color = '#856404';
-        statusDiv.style.border = '1px solid #ffeaa7';
-    } finally {
-        // Re-enable button
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '✅ Scholing Toevoegen';
-    }
-});
+// Check for success parameter in URL
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('success') === 'true') {
+    document.body.insertAdjacentHTML('afterbegin', 
+        '<div style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; padding: 15px; margin: 20px auto; border-radius: 5px; max-width: 600px; text-align: center;">' +
+        '✅ <strong>Bedankt!</strong> Je scholing is succesvol ingediend en wordt binnenkort gecontroleerd.' +
+        '</div>'
+    );
+}
 </script>
 
 ---
