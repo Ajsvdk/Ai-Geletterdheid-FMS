@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/assets/logo.svg" alt="AI-geletterdheid in de zorg" width="120" height="120"><br>
+  <img src="docs/assets/logo.svg" alt="AI-geletterdheid in de zorg" width="200" height="200"><br>
 
   [![Website](https://img.shields.io/website?url=https%3A%2F%2Fajsvdk.github.io%2FAi-Geletterdheid-FMS%2F&up_message=live&up_color=brightgreen&down_message=offline&down_color=red&style=flat-square&label=status)](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
   [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
@@ -27,14 +27,13 @@ Deze site helpt je bij het vinden van:
 
 Het doel van dit overzicht is om je inzicht te geven in het beschikbare AI-onderwijslandschap in de zorg. Het is niet bedoeld om je aan te moedigen simpelweg het nieuwste of populairste te kiezen. Begrijp waarom een bepaalde cursus beter bij jouw situatie past.
 
-Deze site pretendeert verder geen volledig overzicht te geven van al het beschikbare onderwijs, online of offline, met betrekking tot informatiekunde, datawetenschap of AI. Ingezonden suggesties worden beoordeeld op relevantie en volledigheid, om de kwaliteit van het overzicht te waarborgen en spam te voorkomen.
+Deze site pretendeert verder geen volledig overzicht te geven van al het beschikbare onderwijs, online of offline, met betrekking tot AI voor de zorg. Ingezonden suggesties worden beoordeeld op relevantie en volledigheid, om de kwaliteit van het overzicht te waarborgen en spam te voorkomen.
 
 ## 🙌 Bijdragen
 
 Bekijk de [bijdragepagina](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/bijdragen/) voor instructies over het toevoegen van nieuwe scholingsmogelijkheden:
 - Open een pull request met verbeteringen
 - Bespreek ideeën in GitHub issues
-- Verspreid het woord over dit platform
 - Neem contact op voor feedback
 - Voeg nieuwe AI-scholingen toe via het formulier
 
