@@ -35,7 +35,7 @@ Bekijk de [bijdragepagina](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/bijdrag
 - Neem contact op voor feedback en discussie
 - Voeg nieuwe AI-scholingen toe via het formulier
 
-## Open samenwerkign
+## Open samenwerking
 
 Deze site is een open-source initiatief. Iedereen kan bijdragen. Denk je dat het overzicht beter kan? Open dan een pull request met updates of dien een issue in. Je kunt deze repository volgen of sterren om op de hoogte te blijven.
 
