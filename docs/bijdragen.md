@@ -1,10 +1,10 @@
-# Bijdragen aan het AI Scholingsaanbod
+# Bijdragen aan het AI onderwijsoverzicht
 
-Help mee dit overzicht actueel en compleet te houden door nieuwe AI-scholingsmogelijkheden toe te voegen.
+Help mee dit overzicht actueel en compleet te houden door nieuwe AI-scholingsmogelijkheden toe te voegen. Door dit formulier in te vullen, kan je een suggestie doen voor ontbrekend onderwijs. Dit wordt door dan tzt bekeken, beoordeeld op kloppenheid en toegevoegd. Bijdragen worden regelmatig beoordeeld.
 
-## 🆕 Nieuwe scholing toevoegen
+## Nieuw onderwijsaanbod toevoegen
 
-Vul het onderstaande formulier in om een nieuwe AI-scholing toe te voegen aan het overzicht:
+Vul het onderstaande formulier in om een nieuw AI-onderwijs toe te voegen aan het overzicht:
 
 <form action="https://formspree.io/f/mpwraqgp" method="POST" style="max-width: 600px; margin: 0 auto;">
   <input type="hidden" name="_subject" value="Nieuwe AI Scholing: [SCHOLING]" />
@@ -69,7 +69,7 @@ Vul het onderstaande formulier in om een nieuwe AI-scholing toe te voegen aan he
   </div>
 
   <button type="submit" style="background-color: #009688; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%;">
-    📧 Scholing Indienen
+    Scholing Indienen
   </button>
 </form>
 
@@ -79,7 +79,7 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('success') === 'true') {
     document.body.insertAdjacentHTML('afterbegin', 
         '<div style="background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; padding: 15px; margin: 20px auto; border-radius: 5px; max-width: 600px; text-align: center;">' +
-        '✅ <strong>Bedankt!</strong> Je scholing is succesvol ingediend en wordt binnenkort gecontroleerd.' +
+        '<strong>Bedankt!</strong> Je scholing is succesvol ingediend en wordt binnenkort gecontroleerd.' +
         '</div>'
     );
 }
@@ -87,9 +87,9 @@ if (urlParams.get('success') === 'true') {
 
 ---
 
-## ❓ Vragen of problemen?
+## Vragen of problemen?
 
-Voor bugs, verbeteringen of andere vragen: **📧 [aionderwijszorg@gmail.com](mailto:aionderwijszorg@gmail.com)**
+Voor bugs, verbeteringen of andere vragen: **[aionderwijszorg@gmail.com](mailto:aionderwijszorg@gmail.com)**
 
 ---
 

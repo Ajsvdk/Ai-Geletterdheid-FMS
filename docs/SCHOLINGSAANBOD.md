@@ -463,4 +463,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## Bijdragen
 
-Heeft u een AI-opleiding die nog niet in dit overzicht staat? [➕ Voeg hem toe via GitHub](https://github.com/ajsvdk/Ai-Geletterdheid-FMS/issues/new?assignees=&labels=nieuwe-scholing&template=nieuwe_scholing.md&title=%5BSCHOLING%5D+)!
+Heeft u een AI-opleiding die nog niet in dit overzicht staat? [Voeg hem toe](bijdragen.html)!
