@@ -33,8 +33,7 @@ Deze site pretendeert verder geen volledig overzicht te geven van al het beschik
 
 Bekijk de [bijdragepagina](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/bijdragen/) voor instructies over het toevoegen van nieuwe scholingsmogelijkheden:
 - Open een pull request met verbeteringen
-- Bespreek ideeën in GitHub issues
-- Neem contact op voor feedback
+- Neem contact op voor feedback en discussie
 - Voeg nieuwe AI-scholingen toe via het formulier
 
 ## Open samenwerkign

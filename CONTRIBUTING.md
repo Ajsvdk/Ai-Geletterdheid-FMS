@@ -5,10 +5,10 @@ Bedankt voor uw interesse om bij te dragen! We waarderen alle hulp om dit overzi
 ## Hoe kan ik bijdragen?
 
 ### 1. Nieuwe scholing toevoegen
-Gebruik [GitHub Issues](https://github.com/ajsvdk/Ai-Geletterdheid-FMS/issues/new?assignees=&labels=nieuwe-scholing&template=nieuwe_scholing.md&title=%5BSCHOLING%5D+) om nieuwe scholingsmogelijkheden aan te dragen.
+Gebruik het [formulier op de website](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/bijdragen/) om nieuwe scholingsmogelijkheden aan te dragen.
 
 ### 2. Verbeteringen voorstellen
-- Open een [issue](https://github.com/ajsvdk/Ai-Geletterdheid-FMS/issues) op GitHub
+- Neem contact op via [aionderwijszorg@gmail.com](mailto:aionderwijszorg@gmail.com)
 - Beschrijf duidelijk wat u wilt verbeteren
 - Voeg relevante links of voorbeelden toe
 
