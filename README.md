@@ -19,11 +19,10 @@ Zorgprofessionals zoeken naar manieren om zich te oriënteren op het onderwijsaa
 Deze site helpt je bij het vinden van:
 - Cursussen en e-modules over AI in de zorg
 - Praktische informatie zoals tijdsinvestering, kosten en doelgroep
-- Training op verschillende niveaus: van basis tot expert
 - Specifieke scholing per specialisme
 
 
-## 🚨 Disclaimer en anttekening
+## 🚨 Disclaimer
 
 Het doel van dit overzicht is om je inzicht te geven in het beschikbare AI-onderwijslandschap in de zorg. Het is niet bedoeld om je aan te moedigen simpelweg het nieuwste of populairste te kiezen. Begrijp waarom een bepaalde cursus beter bij jouw situatie past.
 
