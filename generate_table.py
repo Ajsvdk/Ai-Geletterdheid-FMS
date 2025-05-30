@@ -56,8 +56,9 @@ function filterTable() {
     const doelgroepFilter = document.getElementById('doelgroep-filter').value;
     const tijdsduurFilter = document.getElementById('tijdsduur-filter').value;
     const kostenFilter = document.getElementById('kosten-filter').value;
+    const searchFilter = document.getElementById('search-filter').value.toLowerCase();
     
-    console.log('Filters:', doelgroepFilter, tijdsduurFilter, kostenFilter); // Debug log
+    console.log('Filters:', doelgroepFilter, tijdsduurFilter, kostenFilter, searchFilter); // Debug log
     
     const table = document.getElementById('course-table');
     const tbody = table.getElementsByTagName('tbody')[0];
@@ -72,6 +73,8 @@ function filterTable() {
         
         if (cells.length >= 7) {
             // Get cell content (0=Logo, 1=Aanbieder, 2=Titel, 3=Doelgroep, 4=Tijdsduur, 5=Kosten, 6=Link)
+            const aanbieder = cells[1].textContent.trim().toLowerCase();
+            const titel = cells[2].textContent.trim().toLowerCase();
             const doelgroep = cells[3].textContent.trim();
             const tijdsduur = cells[4].textContent.trim();
             const kosten = cells[5].textContent.trim();
@@ -86,6 +89,13 @@ function filterTable() {
             
             let showRow = true;
             
+            // Apply search filter (searches in aanbieder and titel)
+            if (searchFilter !== '') {
+                if (!aanbieder.includes(searchFilter) && !titel.includes(searchFilter)) {
+                    showRow = false;
+                }
+            }
+            
             // Apply doelgroep filter
             if (doelgroepFilter !== 'alle' && doelgroep !== doelgroepFilter) {
                 showRow = false;
@@ -95,7 +105,7 @@ function filterTable() {
             if (tijdsduurFilter !== 'alle') {
                 const tijdsduurLower = tijdsduur.toLowerCase();
                 if (tijdsduurFilter === 'kort') {
-                    if (!tijdsduurLower.includes('uur') && !tijdsduurLower.includes('minuten')) {
+                    if (!tijdsduurLower.includes('uur') && !tijdsduurLower.includes('minuten') && !tijdsduurLower.includes('min')) {
                         showRow = false;
                     }
                 } else if (tijdsduurFilter === 'middel') {
@@ -103,7 +113,7 @@ function filterTable() {
                         showRow = false;
                     }
                 } else if (tijdsduurFilter === 'lang') {
-                    if (!tijdsduurLower.includes('week') && !tijdsduurLower.includes('maand')) {
+                    if (!tijdsduurLower.includes('week') && !tijdsduurLower.includes('maand') && !tijdsduurLower.includes('jaar')) {
                         showRow = false;
                     }
                 }
@@ -118,6 +128,35 @@ function filterTable() {
             row.style.display = showRow ? '' : 'none';
         }
     }
+    
+    // Update result count
+    updateResultCount();
+}
+
+function updateResultCount() {
+    const table = document.getElementById('course-table');
+    const tbody = table.getElementsByTagName('tbody')[0];
+    const rows = tbody.getElementsByTagName('tr');
+    let visibleCount = 0;
+    
+    for (let i = 0; i < rows.length; i++) {
+        if (rows[i].style.display !== 'none') {
+            visibleCount++;
+        }
+    }
+    
+    const resultDiv = document.getElementById('result-count');
+    if (resultDiv) {
+        resultDiv.textContent = `${visibleCount} van ${rows.length} cursussen gevonden`;
+    }
+}
+
+function resetFilters() {
+    document.getElementById('doelgroep-filter').value = 'alle';
+    document.getElementById('tijdsduur-filter').value = 'alle';
+    document.getElementById('kosten-filter').value = 'alle';
+    document.getElementById('search-filter').value = '';
+    filterTable();
 }
 
 // Add event listeners when page loads
@@ -127,6 +166,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const doelgroepFilter = document.getElementById('doelgroep-filter');
     const tijdsduurFilter = document.getElementById('tijdsduur-filter');
     const kostenFilter = document.getElementById('kosten-filter');
+    const searchFilter = document.getElementById('search-filter');
+    const searchButton = document.getElementById('search-button');
+    const resetButton = document.getElementById('reset-button');
     
     if (doelgroepFilter) {
         doelgroepFilter.addEventListener('change', filterTable);
@@ -140,6 +182,26 @@ document.addEventListener('DOMContentLoaded', function() {
         kostenFilter.addEventListener('change', filterTable);
         console.log('Kosten filter listener added');
     }
+    if (searchFilter) {
+        searchFilter.addEventListener('input', filterTable);
+        searchFilter.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                filterTable();
+            }
+        });
+        console.log('Search filter listener added');
+    }
+    if (searchButton) {
+        searchButton.addEventListener('click', filterTable);
+        console.log('Search button listener added');
+    }
+    if (resetButton) {
+        resetButton.addEventListener('click', resetFilters);
+        console.log('Reset button listener added');
+    }
+    
+    // Initial filter to show result count
+    filterTable();
 });
 </script>
 '''
@@ -170,7 +232,11 @@ def generate_table_from_csv():
     # Generate filter controls
     filter_html = f'''
 <div style="margin-bottom: 20px; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
-    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+        <div>
+            <label for="search-filter" style="font-weight: bold;">Zoek:</label>
+            <input type="text" id="search-filter" placeholder="Zoek in aanbieder of titel..." style="margin-left: 5px; padding: 5px; width: 200px;">
+        </div>
         <div>
             <label for="doelgroep-filter" style="font-weight: bold;">Doelgroep:</label>
             <select id="doelgroep-filter" style="margin-left: 5px; padding: 5px;">
@@ -195,7 +261,12 @@ def generate_table_from_csv():
                 <option value="betaald">Betaald</option>
             </select>
         </div>
+        <div style="display: flex; gap: 10px;">
+            <button id="search-button" style="padding: 6px 12px; background-color: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer;">Zoek</button>
+            <button id="reset-button" style="padding: 6px 12px; background-color: #6c757d; color: white; border: none; border-radius: 3px; cursor: pointer;">Reset</button>
+        </div>
     </div>
+    <div id="result-count" style="margin-top: 10px; font-weight: bold; color: #555;"></div>
 </div>
 '''
     
