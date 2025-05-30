@@ -10,7 +10,7 @@ Bekijk het aanbod en kies iets dat bij je past om begin vandaag te investeren in
 
 ## Disclaimer
 
-Deze site pretendeert geen volledig overzicht te geven van al het beschikbare onderwijs online en offline met betrekking tot informatiekunde, datawetenschap of AI middelen. Daarvoor ontbreekt het ons aan middelen. Wat nodig we jullie uit om aanvullingen aan te dragen via het menu "Bijdragen". Ingezonden suggesties worden opgenomen op relevantie en volledigheid, met als doel de kwaliteit van het overzicht te bewaken en spam te voorkomen. Ze worden niet op inhoudelijke gronden beoordeeld.
+Deze site pretendeert geen volledig overzicht te geven van al het beschikbare onderwijs, online en offline, met betrekking tot informatiekunde, datawetenschap of AI voor de zorg. Daarvoor ontbreekt het aan middelen. Daarom nodigen we jullie uit om aanvullingen aan te dragen via het menu "Bijdragen". Ingezonden suggesties worden beoordeeld op juistheid, relevantie en volledigheid, met als doel de kwaliteit van het overzicht te bewaken en spam te voorkomen. Ze worden niet op inhoudelijke gronden beoordeeld.
 
 ---
 
