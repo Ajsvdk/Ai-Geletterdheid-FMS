@@ -8,7 +8,7 @@
 
 # AI-geletterdheid in de zorg: een praktisch overzicht
 
-De zorgsector bevindt zich in een stroomversnelling door de opkomst van kunstmatige intelligentie (AI). Deze open source website biedt een actueel overzicht van beschikbaar AI-onderwijs voor zorgprofessionals.
+De zorgsector staat aan de vooravond van grote veranderingen door de opkomst van kunstmatige intelligentie (AI). Deze open source website biedt een actueel en praktijkgericht overzicht van AI-onderwijs, waarmee zorgprofessionals voorbereid worden op een veilige, ethische en effectieve toepassing van AI in de klinische praktijk.
 
 🌐 **Live website**: [ajsvdk.github.io/Ai-Geletterdheid-FMS](https://ajsvdk.github.io/Ai-Geletterdheid-FMS/)
 
